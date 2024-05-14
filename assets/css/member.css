@@ -42,7 +42,9 @@ a {
 .login .nav ul {
     margin-top: 70px;
 }
-
+.login .nav ul li {
+    margin-bottom: 20px;
+}
 .login .nav ul li a {
     font-size: 30px;
     font-weight: 900;
@@ -137,26 +139,53 @@ a {
 
 
 /* signup */
-#signInForm div label {
-    margin-top: 20px;
-    font-family: var(--fontN);
-    font-weight: 700;
-    left: 10px;
-    position: absolute;
+
+#signInForm {
+    margin-top: 30px;
 }
 
+.Userbox {
+    width: 500px;
+    height: 100px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+#signInForm div label {
+    font-family: var(--fontN);
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.check {
+    width: 500px;
+    height: 100px;
+}
 
 .check .input-style {
-    margin-top: 50px;
-    left: 0;
-    width: 400px;
+    width: 500px;
     height: 60px;
     padding: 20px;
     align-items: center;
     border: none;
     font-family: var(--fontN);
     font-weight: 700;
+    margin-bottom: 50px;
     background-color: #e0e0e0;
+}
+
+.signup-btn {
+    margin-top: 50px;
+    color: #fff;
+    width: 500px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #5d73d4;
+    font-family: var(--fontN);
+    font-weight: 600;
 }
 
 .btn {
