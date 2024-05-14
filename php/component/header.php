@@ -12,7 +12,7 @@
             <ul>
                 <li><a href="#">api 상품</a></li>
                 <li><a href="#">카테고리</a></li>
-                <li><a href="#">공지사항1</a></li>
+                <li><a href="#">공지사항</a></li>
             </ul>
         </div>
     </div>

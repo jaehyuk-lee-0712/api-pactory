@@ -138,7 +138,7 @@
 
 
 /* footer start */
-#footer {
+/* #footer {
     width: 100%;
     height: 515px;
     background-color: #ECECEC;
@@ -226,6 +226,112 @@
 #rights {
     margin-left: 15px;
     margin-bottom: 15px;
+} */
+
+/* 05/14 Footer 수정 Nam */
+#footer {
+    width: 100%;
+    height: 250px;
+    background-color: #032E59;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__container {
+    width: 1354px;
+    height: 100%;
+    background-color: #032E59;
+}
+
+#f_logos {
+    display: flex;
+    align-items: center;
+    width: 1354px;
+    height: inherit;
+}
+
+#flogo {
+    width: 220px;
+    height: 150px;
+    margin: 0 auto;
+    background: url("../img/footerlogo.png") center / cover;
+    background-repeat: no-repeat;
+}
+
+#ftitle {
+    width: 350px;
+    text-align: right;
+    font-size: 1.25rem;
+    color: var(--white600);
+    font-weight: 900;
+    font-family: var(--fontT);
+}
+
+#ftitle em {
+    font-size: 2rem;
+    color: var(--white);
+}
+
+#f_logos ul {
+    width: 350px;
+    display: flex;
+    margin-right: 20px;
+}
+
+#f_logos ul li {
+    margin-right: 25px;
+}
+
+#f_logos ul li a {
+    display: inline-block;
+    font-family: var(--fontT);
+    font-weight: 600;
+    line-height: 2;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.follow>li.icon>a {
+    width: 40px;
+    height: 40px;
+    background-color: var(--white);
+    border-radius: 50%;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    margin: 0 !important;
+}
+
+.follow>li.icon>a img {
+    width: 25px;
+    height: 25px;
+}
+
+#rights {
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+/* footer end */
+@media (max-width : 1350px) {
+    .header-container {
+        width: 90vw;
+    }
+}
+
+@media (min-width : 375px) {
+    #body {
+        width: 1rem;
+    }
+
+    ul {
+        li {
+            a {
+                font-size: 10px;
+            }
+        }
+    }
 }
 
 /* footer end */
