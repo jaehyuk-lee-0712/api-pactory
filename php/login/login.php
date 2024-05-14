@@ -83,7 +83,7 @@
                             <input type="email" name="userEmail" id="userEmail" placeholder="이메일을 입력하세요."
                                 autocomplete="off" class="input-style" required>
                         </div>
-                        <p class="msg"></p>
+                        <p class="msg" id="userEmailComment"></p>
                     </div>
                     <div class="Userbox">
                         <label for="userName" class="required">이름</label>
@@ -91,6 +91,7 @@
                             <input type="text" name="userName" id="userName" placeholder="이름을 입력하세요."
                                 autocomplete="off" class="input-style" required>
                         </div>
+                        <p class="msg" id="userNameComment"></p>
                     </div>
                     <div class="Userbox">
                         <label for="userPass" class="required">비밀번호</label>
@@ -98,6 +99,7 @@
                             <input type="password" name="userPass" id="userPass" placeholder="비밀번호를 입력하세요."
                                 autocomplete="off" class="input-style" required>
                         </div>
+                        <p class="msg" id="userPassComment"></p>
                     </div>
                     <div class="Userbox">
                         <label for="userBirth" class="required">생년월일</label>
@@ -105,8 +107,9 @@
                             <input type="text" name="userBirth" id="userBirth" placeholder="공백없이 8자리를 입력하세요."
                                 autocomplete="off" class="input-style" required>
                         </div>
+                        <p class="msg" id="userBirthComment"></p>
                     </div>
-                    <input type="submit" class="signup-btn" value="회원가입">
+                    <input type="submit" class="signup-btn" onclick = "emailChecking()" value="회원가입">
                 </div>
             </form>
 
@@ -114,6 +117,7 @@
         </div>
         </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
             document.addEventListener("DOMContentLoaded", function () {
                
@@ -122,6 +126,56 @@
             function goSignUp() {
                 document.getElementById('loginForm').style.display = 'none';
             }
+    </script>
+    <script>
+        let isEmailCheck = false;
+
+function emailChecking() {
+    let userEmail = $("#userEmail").val();
+
+    if (userEmail == null || userEmail === '') {
+        $("#userEmailComment").text("➟ 이메일을 입력해주세요!");
+        $("#userEmail").focus();
+        return false;
+    } else {
+        let getuserEmail = RegExp(/^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([\-.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i);
+
+        if (!getuserEmail.test($("#userEmail").val())) {
+            $("#userEmailComment").text("➟ 올바른 이메일 주소를 입력해주세요");
+            $("#userEmail").val('');
+            $("#userEmail").focus();
+            return false;
+        }
+    }
+
+    $.ajax({
+        type: "POST",
+        url: "signUpCheck.php",
+        data: {"userEmail": userEmail, "type": "isEmailCheck"},
+        dataType: "json",
+        success: function(data) {
+            if (data.result == "good") {
+                $("#userEmailComment").text("➟ 사용 가능한 이메일입니다.");
+                isEmailCheck = true;
+                // 중복 여부 확인 후 회원가입 실행
+                signUp();
+            } else {
+                $("#userEmailComment").text("➟ 이미 존재하는 이메일입니다.");
+                isEmailCheck = false;
+            }
+        }
+    });
+}
+
+function signUp() {
+    if (!isEmailCheck) {
+        alert("가입 실패!");
+    } else {
+        // 여기에 회원가입 코드 추가
+        alert("회원가입을 축하합니다.!")
+    }
+}
+
     </script>
 </body>
 

@@ -8,7 +8,7 @@
     $userPhone =mysqli_real_escape_string($connection , $_POST['userPhone']);
     $regTime = time();
 
-    $hashedPass = password_hash($youPass , PASSWORD_DEFAULT) ;
+    $hashedPass = password_hash($userPass , PASSWORD_DEFAULT) ;
 
      // 쿼리
     // $sql = "INSERT INTO members(youID , youName , youEmail , youPass , youAddress , youPhone , regTime) VALUES()";
