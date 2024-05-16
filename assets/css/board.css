@@ -1,0 +1,119 @@
+#main {
+    width: 100%;
+    height: calc(100% - 565px);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#main .container {
+    width: 1354px;
+    height: inherit;
+}
+
+.intro__inner h2 {
+    font-family: var(--fontN);
+    font-weight: 500;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
+.board__search .right .btn__style {
+    width: 100px;
+    color: var(--white);
+    background-color: #575f78;
+    display: inline-block;
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: var(--fontN);
+}
+
+/* board__search */
+.board__search {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+
+.board__search .right input {
+    padding: 12px 20px;
+    border: 0;
+    border-radius: 5px;
+    width: 270px;
+    font-size: 1rem;
+    border: 1px solid var(--black);
+    font-family: var(--fontN);
+}
+
+.board__search .right select {
+    width: 100px;
+    padding: 11px;
+    border: 0;
+    border-radius: 5px;
+    color: var(--black300);
+    font-size: 1rem;
+    border: 1px solid var(--black);
+    font-family: var(--fontN);
+}
+
+
+
+/* board__search end */
+
+.board__table {
+    margin-top: 15px;
+    border-top: 2px solid var(--black);
+    border-bottom: 1px solid var(--black);
+}
+
+.board__table th {
+    background-color: #032E59;
+    color: #fff;
+    font-family: var(--fontN);
+
+}
+
+.board__table td,
+.board__table th {
+    padding: 15px 5px;
+    border-bottom: 1px solid var(--black300);
+    text-align: center;
+    font-family: var(--fontN);
+}
+
+.board__table tr:hover {
+    background-color: var(--white200);
+}
+
+.board__pages {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.board__pages ul {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.board__pages ul li a {
+    font-family: var(--fontN);
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+    margin-left: -1px;
+    border: 1px solid var(--black);
+    color: var(--black);
+}
+
+.board__pages li a:hover,
+.board__pages li.active a {
+    background-color: #032E59;
+    color: var(--white);
+}
