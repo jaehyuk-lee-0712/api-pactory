@@ -6,9 +6,22 @@
     display: flex;
 }
 
-#main .container {
-    width: 1354px;
+#main .board-container {
+    width: 1354px !important;
     height: inherit;
+}
+
+.board__wrap .write__btn {
+
+    width: 80px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.75rem 0.9rem;
+    border-radius: 5px;
+    color: var(--white);
+    background-color: #575f78;
+    font-family: var(--fontN);
+    cursor: pointer;
 }
 
 .intro__inner h2 {

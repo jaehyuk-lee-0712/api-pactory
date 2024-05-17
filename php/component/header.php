@@ -1,7 +1,3 @@
-<?php
-    include "../connection/connection.php";
-?>
-
 <header id="header">
     <div id="logos">
         <div id="logo"></div>

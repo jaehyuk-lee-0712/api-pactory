@@ -1,3 +1,8 @@
+<?php
+    include "php/connection/connection.php";
+?>
+
+
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -10,10 +15,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
 </head>
 
-<?php
-    include "php/connection/connection.php";
-?>
-
 <body>
     <header id="header">
         <div id="logos">
@@ -25,7 +26,7 @@
                 <ul>
                     <li><a href="#">api 상품</a></li>
                     <li><a href="#">카테고리</a></li>
-                    <li><a href="#">공지사항</a></li>
+                    <li><a href="php/board/board.php">공지사항</a></li>
                 </ul>
             </div>
         </div>
@@ -117,39 +118,15 @@
     <footer id="footer">
         <div class="footer__container">
             <div id="f_logos">
+                <div id="ftitle">2024<em> apiPactory</em></div>
                 <div id="flogo"></div>
-                <div id="ftitle">
-                    <h2><a href="#">apiPactory</a></h2>
-                </div>
-            </div>
-            <div id="contact">
-                <ul class="about">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">about us</a></li>
-                    <li><a href="#">Jobs</a></li>
-                    <li><a href="#">Blog</a></li>
-                </ul>
-                <ul class="community">
-                    <li><a href="#">Community</a></li>
-                    <li><a href="#">Help Center</a></li>
-                    <li><a href="#">Log in</a></li>
-                    <li><a href="#">Sign up</a></li>
-                </ul>
-                <ul class="businesses">
-                    <li><a href="#">Businesses</a></li>
-                    <li><a href="#">about us</a></li>
-                    <li><a href="#">Jobs</a></li>
-                    <li><a href="#">Blog</a></li>
-                </ul>
                 <ul class="follow">
-                    <li><a href="#">Follow us on</a></li>
-                    <li class="icon"><a href="#"></a></li>
-                    <li class="icon"><a href="#"></a></li>
-                    <li class="icon"><a href="#"></a></li>
+                    <!-- <li><a href="#">Follow us on</a></li> -->
+                    <li class="icon"><a href="#"><img src="assets/img/snsLogo1.png" alt="로고"></a></li>
+                    <li class="icon"><a href="#"><img src="assets/img/snsLogo2.png" alt="로고"></a></li>
+                    <li class="icon"><a href="#"><img src="assets/img/snsLogo3.png" alt="로고"></a></li>
+                    <li class="icon"><a href="#"><img src="assets/img/snsLogo4.png" alt="로고"></a></li>
                 </ul>
-            </div>
-            <div id="rights">
-                <h2>© 2024 apiPactory, inc. All rights resrved</h2>
             </div>
         </div>
     </footer>
