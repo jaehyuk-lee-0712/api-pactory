@@ -25,7 +25,7 @@
 ?>
         <div>
             <!-- login form -->
-            <!-- <form action="" id="loginForm">
+            <form action="" id="loginForm">
                 <article id="main">
                     <div class="container">
                         <div class="login">
@@ -66,7 +66,7 @@
                         </div>
                     </div>
                 </article>
-            </form> -->
+            </form>
             <!-- // login form end -->
             
             <!-- // signup form start -->
@@ -118,54 +118,55 @@
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>
-            document.addEventListener("DOMContentLoaded", function () {
-               
-            });
+<!-- <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        
+        });
 
-            function goSignUp() {
-                document.getElementById('loginForm').style.display = 'none';
-            }
-    </script>
-    <script>
+        function goSignUp() {
+            document.getElementById('loginForm').style.display = 'none';
+        }
+
+</script> -->
+<script>
         let isEmailCheck = false;
 
-function emailChecking() {
-    let userEmail = $("#userEmail").val();
+        function emailChecking() {
+        let userEmail = $("#userEmail").val();
 
-    if (userEmail == null || userEmail === '') {
-        $("#userEmailComment").text("➟ 이메일을 입력해주세요!");
-        $("#userEmail").focus();
-        return false;
-    } else {
-        let getuserEmail = RegExp(/^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([\-.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i);
-
-        if (!getuserEmail.test($("#userEmail").val())) {
-            $("#userEmailComment").text("➟ 올바른 이메일 주소를 입력해주세요");
-            $("#userEmail").val('');
+        if (userEmail == null || userEmail === '') {
+            $("#userEmailComment").text("➟ 이메일을 입력해주세요!");
             $("#userEmail").focus();
             return false;
-        }
-    }
+        } else {
+            let getuserEmail = RegExp(/^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([\-.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i);
 
-    $.ajax({
-        type: "POST",
-        url: "signUpCheck.php",
-        data: {"userEmail": userEmail, "type": "isEmailCheck"},
-        dataType: "json",
-        success: function(data) {
-            if (data.result == "good") {
-                // $("#userEmailComment").text("➟ 사용 가능한 이메일입니다.");
-                isEmailCheck = true;
-                // 중복 여부 확인 후 회원가입 실행
-                signUp();
-            } else {
-                $("#userEmailComment").text("➟ 이미 존재하는 이메일입니다.");
-                isEmailCheck = false;
+            if (!getuserEmail.test($("#userEmail").val())) {
+                $("#userEmailComment").text("➟ 올바른 이메일 주소를 입력해주세요");
+                $("#userEmail").val('');
+                $("#userEmail").focus();
+                return false;
             }
         }
-    });
-}
+
+        $.ajax({
+            type: "POST",
+            url: "signUpCheck.php",
+            data: {"userEmail": userEmail, "type": "isEmailCheck"},
+            dataType: "json",
+            success: function(data) {
+                if (data.result == "good") {
+                    // $("#userEmailComment").text("➟ 사용 가능한 이메일입니다.");
+                    isEmailCheck = true;
+                    // 중복 여부 확인 후 회원가입 실행
+                    signUp();
+                } else {
+                    $("#userEmailComment").text("➟ 이미 존재하는 이메일입니다.");
+                    isEmailCheck = false;
+                }
+            }
+        });
+    }
         function joinChecks() {
             // 메세지 초기화
             $(".msg").text("");
@@ -197,12 +198,12 @@ function emailChecking() {
                 return false;
             }
 
-            // 비밀번호 검사
-            let userPass = $("#userPass").val();
+            // 회원가입 비밀번호 검사
+            let userPass = $("#signInForm #userPass").val();
             let passPattern = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{4,20}$/; // 최소 4자, 최대 20자, 하나 이상의 문자, 숫자, 특수문자 포함
-
-            if (userPass === '') {
+            if (userPass === "") {
                 $("#userPassComment").text("➟ 비밀번호를 입력해주세요.");
+                // console.log("#userPassComment");
                 $("#userPass").focus();
                 return false;
             } else if (!passPattern.test(userPass)) {
@@ -210,6 +211,8 @@ function emailChecking() {
                 $("#userPass").focus();
                 return false;
             }
+
+
 
             // 연락처 검사
             let userBirth = $("#userBirth").val();
@@ -226,15 +229,33 @@ function emailChecking() {
             }
 }
 
-function signUp() {
-    if (!isEmailCheck) {
-        alert("가입 실패!");
-    } else {
-        // alert("회원가입을 축하합니다.!");
+    function signUp() {
+        if (!isEmailCheck) {
+            alert("가입 실패!");
+        } else {
+            // alert("회원가입을 축하합니다.!");
+        }
     }
-}
 
+</script>
+    <script>
+         document.addEventListener('DOMContentLoaded', function() {
+            const params = new URLSearchParams(window.location.search);
+            const action = params.get('action');
+
+            const loginForm = document.getElementById('loginForm');
+            const signupForm = document.getElementById('signInForm');
+
+            if (action === 'signup') {
+                loginForm.style.display = 'none';
+                signupForm.style.display = 'block';
+            } else {
+                loginForm.style.display = 'block';
+                signupForm.style.display = 'none';
+            }
+        });
     </script>
+   
 </body>
 
 </html>

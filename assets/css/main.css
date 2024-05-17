@@ -20,7 +20,7 @@
     border-radius: 27px;
     position: relative;
     margin-bottom: 80px;
-    background-image: url(/apiPactory/assets/img/mainimg.png);
+    background-image: url(/assets/img/mainimg.png);
 }
 
 #main .content1 .h3 ul {
@@ -78,15 +78,15 @@
     margin-top: 32px;
     width: 125px;
     height: 40px;
-    border: 1px solid var(--black100);
+    border: 2px solid var(--black200);
     border-radius: 50px;
     justify-content: center;
     align-items: center;
     display: flex;
     margin: 0 auto;
     font-family: var(--fontN);
-    font-weight: 500;
-    color: var(--black100);
+    font-weight: 600;
+    color: var(--black200);
 }
 
 #main .content2 {

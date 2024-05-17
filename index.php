@@ -42,12 +42,15 @@
 <?php
     }else {
 ?>
-        <a href="php/login/login.php">로그인</a>
-        <a href="#">회원가입</a>
+         <div class="login-button">
+            <a href="php/login/login.php?action=login">로그인</a>
+        </div>
+        <div class="signup-button">
+            <a href="php/login/login.php?action=signup">회원가입</a>
+        </div>
 <?php
     }
 ?>
-
 
             <!-- <div id="profile">
             </div> -->
@@ -84,14 +87,14 @@
                 <div class="category-title">
                     <li>상위 카테고리</li>
                 </div>
-                <div class="catefory-bar">
+                <div class="category-bar">
                     <ul>
                         <li>
-                            <a href="#"><span>쇼핑</span></a>
-                            <a href="#"><span>뉴스</span></a>
-                            <a href="#"><span>지도</span></a>
-                            <a href="#"><span>은행</span></a>
-                            <a href="#"><span>날씨</span></a>
+                            <a href="#"><img src="assets/img/category-icon1.png" alt="이미지"><span>쇼핑</span></a>
+                            <a href="#"><img src="assets/img/category-icon2.png" alt="이미지"><span>뉴스</span></a>
+                            <a href="#"><img src="assets/img/category-icon3.png" alt="이미지"><span>지도</span></a>
+                            <a href="#"><img src="assets/img/category-icon4.png" alt="이미지"><span>은행</span></a>
+                            <a href="#"><img src="assets/img/category-icon5.png" alt="이미지"><span>날씨</span></a>
                         </li>
                     </ul>
                 </div>
@@ -104,11 +107,11 @@
                 <div class="apibanner">
                     <ul>
                         <li>
-                            <a href="#"><img src="assets/img/notice1.jpg" alt="이미지"><span>구글지도 api</span></a>
-                            <a href="#"><img src="assets/img/notice2.jpg" alt="이미지"><span>뉴스 api</span></a>
-                            <a href="#"><img src="assets/img/notice3.jpg" alt="이미지"><span>은행 api</span></a>
-                            <a href="#"><img src="assets/img/notice4.jpg" alt="이미지"><span>기상청 api</span></a>
-                            <a href="#"><img src="assets/img/notice5.jpg" alt="이미지"><span>쇼핑 api</span></a>
+                            <a href="#"><img src="assets/img/notice1.jpg" alt="이미지"><span>Maps API</span></a>
+                            <a href="#"><img src="assets/img/notice2.jpg" alt="이미지"><span>News API</span></a>
+                            <a href="#"><img src="assets/img/notice3.jpg" alt="이미지"><span>Bank API</span></a>
+                            <a href="#"><img src="assets/img/notice4.jpg" alt="이미지"><span>Weather API</span></a>
+                            <a href="#"><img src="assets/img/notice5.jpg" alt="이미지"><span>Shppping APi</span></a>
                         </li>
                     </ul>
                 </div>
@@ -130,6 +133,36 @@
             </div>
         </div>
     </footer>
+    </footer>
+    <script>
+            document.addEventListener("DOMContentLoaded", function () {
+               
+            });
+
+            function goSignUp() {
+                document.getElementById('loginForm').style.display = 'none';
+            }
+    </script>
+     <script>
+             document.addEventListener('DOMContentLoaded', function() {
+            const loginBtn = document.getElementById('loginBtn');
+            const signupBtn = document.getElementById('signupBtn');
+            const loginForm = document.getElementById('loginForm');
+            const signupForm = document.getElementById('signupForm');
+
+            loginBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                loginForm.style.display = 'block';
+                signupForm.style.display = 'none';
+            });
+
+            signupBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                loginForm.style.display = 'none';
+                signupForm.style.display = 'block';
+            });
+        });
+    </script>
 </body>
 
 </html>

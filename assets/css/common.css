@@ -7,8 +7,6 @@
     align-items: center;
     justify-content: space-between;
     margin-top: 10px;
-    font-family: var(--fontN);
-    font-weight: 700;
 }
 
 #logos {
@@ -61,7 +59,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: 30px;
 }
+
+#controller a {
+    margin-left: 30px;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: var(--fontN);
+}
+
 
 #searchBar {
     width: 370px;
@@ -104,17 +111,6 @@
     display: none;
 }
 
-#controller {
-    margin-right: 30px;
-}
-
-#controller a {
-    width: 60px;
-    margin-left: 30px;
-    font-family: var(--fontN);
-    font-weight: 700;
-    font-size: 12px;
-}
 
 /* header end */
 

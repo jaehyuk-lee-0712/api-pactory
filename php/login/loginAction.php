@@ -14,7 +14,7 @@
 
         if($cnt == 0) {
             // 사용자 ID가 존재하지 않을 때.
-            echo "<script>alert('아이디 또는 비밀번호1를 확인해주세요.');</script>";
+            echo "<script>alert('아이디 또는 비밀번호를 확인해주세요.');</script>";
             echo "<script>history.back();</script>";
         }else {
             // 사용자 ID가 존재할 때.
@@ -29,8 +29,8 @@
                 echo "<script>window.location.href='/'</script>";
             }else {
                 echo "<script>alert('아이디 또는 비밀번호2를 확인해주세요.');</script>";
-                echo $userInfo['userPass'];
-                echo $userPass;
+                // echo $userInfo['userPass'];
+                // echo $userPass;
                 // echo "<script>history.back();</script>";
 
             }
