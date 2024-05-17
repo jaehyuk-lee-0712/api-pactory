@@ -35,7 +35,7 @@ $totalPosts = $totalPostsResult->fetch_assoc()['total'];
 
         <section class="board__wrap">
             <h2 class="blind">공지사항</h2>
-            <button type="submit" class="write__btn">글쓰기</button>
+      
             <div class="board__inner">
                 <div class="board__search">
                 <div class="left">
@@ -47,12 +47,8 @@ $totalPosts = $totalPostsResult->fetch_assoc()['total'];
                                 <legend class="blind">게시판 검색 영역</legend>
                                 <input type="search" name="searchKeyword" id="searchKeyword"
                                     placeholder="검색어를 입력하세요!" required>
-                                <select name="searchOption" id="searchOption">
-                                    <option value="10">10개</option>
-                                    <option value="25">25개</option>
-                                    <option value="50">50개</option>
-                                </select>
                                 <button type="submit" class="btn__style">검색</button>
+                                <button type="submit" class="write__btn">글쓰기</button>
                             </fieldset>
                         </form>
                     </div>
@@ -98,7 +94,7 @@ $totalPosts = $totalPostsResult->fetch_assoc()['total'];
 
                 <div class="board__pages">
                     <ul>
-                        <li class="first"><a href="#">처음으로</a></li>
+                        <!-- <li class="first"><a href="#">처음으로</a></li>
                         <li class="prev"><a href="#">이전</a></li>
                         <li class="active"><a href="#">1</a></li>
                         <li><a href="#">2</a></li>
@@ -110,7 +106,41 @@ $totalPosts = $totalPostsResult->fetch_assoc()['total'];
                         <li><a href="#">8</a></li>
                         <li><a href="#">9</a></li>
                         <li class="next"><a href="#">다음</a></li>
-                        <li class="last"><a href="#">마지막으로</a></li>
+                        <li class="last"><a href="#">마지막으로</a></li> -->
+<?php
+
+    $boardTotalCnt = ceil($boardTotalCnt / $viewNum);
+    $pageView = 4;
+    $startPage = $page - $pageView;
+    $endPage = $page + $pageView;
+    $nextPage = $page + 1;
+    $beforePage = $page -1;
+
+    if($startPage < 1) $startPage = 1;
+    if($endPage >= $boardTotalCnt) $endPage = $boardTotalCnt;
+
+    // 처음으로/ 이전
+
+    if($page != 1) {
+        echo "<li class='first'><a href='board.php?page=1'>처음으로</a></li>"; 
+        echo "<li class='first'><a href='board.php?page={$beforePage}'>이전</a></li>"; 
+    }
+    
+    // 페이지
+    for($i = $startPage; $i<=$endPage; $i++ ) {
+        $active = "";
+        if($i == $page) {
+            $active = "active";
+        }
+        echo "<li><a class='{$active}' href='board.php?page={$i}'>{$i}</a></li>";
+    }
+
+    // 마지막으로/ 이전
+    if($page != $boardTotalCnt) {
+        echo "<li class='first'><a href='board.php?page={$nextPage}'>다음</a></li>"; 
+        echo "<li class='end'><a href='board.php?page={$boardTotalCnt}'>마지막으로</a></li>"; 
+    }
+?>
                     </ul>
                 </div>
                 <!-- //board__pages -->
@@ -121,6 +151,19 @@ $totalPosts = $totalPostsResult->fetch_assoc()['total'];
 </main>
     <!-- //main -->
  <?php include "../component/footer.php" ?>
+ <script>
+        window.onload = function () {
+            document.querySelectorAll(".board__pages>ul>li>a").forEach(function (item) {
+                item.addEventListener("mouseover", function () {
+                    item.classList.add("active")
+                })
+
+                item.addEventListener("mouseout", function () {
+                    item.classList.remove("active")
+                })
+            })
+        }
+    </script>
 </body>
 
 </html>
