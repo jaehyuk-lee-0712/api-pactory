@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/logintemp.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div id="logos">
+                <div id="logo"></div>
+                <div id="title">
+                    <h2><a href="/">apiPactory</a></h2>
+                </div>
+                <div id="menu">
+                    <ul>
+                        <li><a href="#">api 상품</a></li>
+                        <li><a href="#">카테고리</a></li>
+                        <li><a href="#">공지사항</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="controller">
+                <div id="searchBar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="검색어를 입력하세요" class="search-input">
+                </div>
+                <div id="profile"></div>
+            </div>
+        </header>
+        <article id="main">
+            <div class="container">
+                <div class="login">
+                    <div class="nav">
+                        <ul>
+                            <li><a href="#">LOGIN</a></li>
+                        </ul>
+                    </div>
+                    <form id="signInForm" action="signUpForm.php" name="signUpForm" method="post">
+                        <div>
+                            <label for="userID" class="required">UserID</label>
+                            <div class="check">
+                                <input type="email" name="userID" id="userID" placeholder="UserEmail" autocomplete="off"
+                                    class="input-style" required>
+                                <div class="btn">아이디 중복검사</div>
+                            </div>
+                            <p class="msg"></p>
+                        </div>
+                        <div>
+                            <label for="userPass" class="required">UserPass</label>
+                            <div class="check">
+                                <input type="password" name="userPass" id="userPass" placeholder="UserPass"
+                                    autocomplete="off" class="input-style" required>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </article>
+    </div>
+
+</body>
+
+</html>

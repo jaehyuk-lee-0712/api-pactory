@@ -216,14 +216,14 @@ a {
     align-items: center;
     justify-content: center;
     border: none;
-    border-radius: 50px;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 .find {
     height: 500px;
     border-radius: 20px;
-    margin-top: 150px;
+    margin-top: 59px;
     text-align: center;
     position: relative;
 }
@@ -272,7 +272,7 @@ a {
 .findID__Box {
     height: 500px;
     border-radius: 20px;
-    margin-top: 150px;
+    margin-top: 50px;
     text-align: center;
     position: relative;
 }
@@ -310,6 +310,7 @@ a {
     font-family: var(--fontN);
     font-weight: 700;
     background-color: #e7e7e7;
+    border-radius: 5px
 }
 
 .findID__Box .confirm ul {
@@ -323,12 +324,119 @@ a {
     justify-content: center;
     border: none;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 .findID__Box .confirm ul>li>a {
     color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+
+
+.findPass__box {
+    height: 500px;
+    border-radius: 20px;
+    margin-top: 50px;
+    text-align: center;
+    position: relative;
+}
+
+
+.findPass__box .nav ul {
+    margin-top: 40px;
+}
+
+.findPass__box .nav ul li a {
+    font-size: 30px;
+    font-weight: 900;
+    font-family: var(--fontN);
+    color: #1a2b8a;
+    text-decoration: underline;
+    margin-bottom: 20px;
+    text-underline-position: under;
+    display: inline-block;
+}
+
+.findPass__box .nav ul span {
+    font-size: 16px;
+    font-weight: 800;
+    font-family: var(--fontN);
+    color: #929090;
+}
+
+.findPass__box .idbox .input-style {
+    margin-top: 30px;
+    width: 400px;
+    height: 60px;
+    padding: 20px;
+    display: inline-flex;
+    align-items: center;
+    border: none;
+    font-family: var(--fontN);
+    font-weight: 700;
+    background-color: #e7e7e7;
+    border-radius: 5px
+}
+
+.findPass__box .confirm ul {
+    padding: 20px;
+    margin-top: 40px;
+    width: 400px;
+    height: 60px;
+    background-color: #5d73d4;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.findPass__box .confirm ul>li>a {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+}
+ #forget-style ul li {
+    left: 100px;
+    position: absolute;
+    margin-top: 5px;
+}
+
+ #forget-style ul li a {
+    color: #4c60d1;
+    font-size: 15px;
+    font-family: var(--fontN);
     font-weight: 500;
 }
+
+#return-style ul li {
+    right: 100px;
+    position: absolute;
+    margin-top: 5px;
+}
+
+#return-style ul li a {
+    color: #4c60d1;
+    font-size: 15px;
+    font-family: var(--fontN);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#return-style ul li a:hover {
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+ #forget-style ul li a:hover {
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+/* find_page end */
 
 .msg {
     font-size: 16px;
