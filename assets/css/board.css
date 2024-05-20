@@ -125,7 +125,7 @@
 }
 
 .board__pages li a:hover,
-.board__pages li.active a {
+.board__pages li a.active {
     background-color: #032E59;
     color: var(--white);
 }
