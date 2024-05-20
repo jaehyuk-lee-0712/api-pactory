@@ -9,18 +9,23 @@
 #main .board-container {
     width: 1354px !important;
     height: inherit;
+    box-sizing: border-box;
 }
 
 .board__search .right .write__btn {
     width: 100px;
     color: var(--white);
-    background-color: #09143b;
+    background-color: #09143B;
     display: inline-block;
     font-size: 1rem;
     padding: 0.8rem 1rem;
     border-radius: 5px;
     cursor: pointer;
     font-family: var(--fontN);
+}
+
+.board__search .right .write__btn a {
+    color: var(--white);
 }
 
 .intro__inner h2 {
@@ -31,11 +36,10 @@
     margin-bottom: 50px;
 }
 
-
 .board__search .right .btn__style {
     width: 100px;
     color: var(--white);
-    background-color: #575f78;
+    background-color: #575F78;
     display: inline-block;
     font-size: 1rem;
     padding: 0.8rem 2rem;
@@ -50,7 +54,6 @@
     justify-content: space-between;
     align-items: flex-end;
 }
-
 
 .board__search .right input {
     padding: 12px 20px;
@@ -73,10 +76,7 @@
     font-family: var(--fontN);
 }
 
-
-
 /* board__search end */
-
 .board__table {
     margin-top: 15px;
     border-top: 2px solid var(--black);
@@ -87,7 +87,6 @@
     background-color: #032E59;
     color: #fff;
     font-family: var(--fontN);
-
 }
 
 .board__table td,
@@ -112,7 +111,6 @@
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
-
 }
 
 .board__pages ul li a {
@@ -129,3 +127,49 @@
     background-color: #032E59;
     color: var(--white);
 }
+
+/* BOARD_ write */
+.board__write {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.board__write label {
+    width: 1354px;
+    font-size: 1.25rem;
+    margin-bottom: 6px;
+    display: inline-block;
+}
+
+.board__write input {
+    font-size: 1rem;
+    width: 100%;
+    padding: 20px 20px;
+    margin-bottom: 50px;
+}
+
+.board__write textarea {
+    font-size: 1rem;
+    width: 100%;
+    resize: none;
+    padding: 20px 20px;
+    box-sizing: border-box;
+}
+
+.board__write .write-btn {}
+
+.board__write .write-btn button {
+    background-color: var(--white300);
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.board__write .input-style {
+    background-color: var(--white300);
+}
+
+/* board__view */
