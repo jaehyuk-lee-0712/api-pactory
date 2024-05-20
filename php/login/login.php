@@ -25,7 +25,7 @@
 ?>
         <div>
             <!-- login form -->
-            <form action="" id="loginForm">
+            <form action="loginAction.php" id="loginForm" method ="post">
                 <article id="main">
                     <div class="container">
                         <div class="login">
@@ -36,7 +36,7 @@
                             </div>
                             <div class="idbox">
                                 <div>
-                                    <input type="email" name="userID" id="userID" placeholder="UserEmail" autocomplete="off"
+                                    <input type="email" name="userEmail" id="userEmail" placeholder="userEmail" autocomplete="off"
                                         class="input-style" required>
                                 </div>
                             </div>
@@ -58,10 +58,8 @@
                                     <li><a href="#" onclick="goSignUp()">Signup</a></li>
                                 </ul>
                             </div>
-                            <div class="confirm">
-                                <ul>
-                                    <li><a href="#">LOGIN</a></li>
-                                </ul>
+                            <div class="submit">
+                                    <button class="login__btn" type="submit">로그인</button>
                             </div>
                         </div>
                     </div>
@@ -129,25 +127,25 @@
 
 </script> -->
 <script>
-        let isEmailCheck = false;
+    let isEmailCheck = false;
 
-        function emailChecking() {
-        let userEmail = $("#userEmail").val();
+    function emailChecking() {
+    let userEmail = $("#userEmail").val();
 
-        if (userEmail == null || userEmail === '') {
-            $("#userEmailComment").text("➟ 이메일을 입력해주세요!");
+    if (userEmail == null || userEmail === '') {
+        $("#userEmailComment").text("➟ 이메일을 입력해주세요!");
+        $("#userEmail").focus();
+        return false;
+    } else {
+        let getuserEmail = RegExp(/^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([\-.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i);
+
+        if (!getuserEmail.test($("#userEmail").val())) {
+            $("#userEmailComment").text("➟ 올바른 이메일 주소를 입력해주세요");
+            $("#userEmail").val('');
             $("#userEmail").focus();
             return false;
-        } else {
-            let getuserEmail = RegExp(/^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([\-.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i);
-
-            if (!getuserEmail.test($("#userEmail").val())) {
-                $("#userEmailComment").text("➟ 올바른 이메일 주소를 입력해주세요");
-                $("#userEmail").val('');
-                $("#userEmail").focus();
-                return false;
-            }
         }
+    }
 
         $.ajax({
             type: "POST",
@@ -227,7 +225,7 @@
                 $("#userBirth").focus();
                 return false;
             }
-}
+        }
 
     function signUp() {
         if (!isEmailCheck) {
@@ -237,7 +235,7 @@
         }
     }
 
-</script>
+    </script>
     <script>
          document.addEventListener('DOMContentLoaded', function() {
             const params = new URLSearchParams(window.location.search);
@@ -255,7 +253,7 @@
             }
         });
     </script>
-   
+
 </body>
 
 </html>

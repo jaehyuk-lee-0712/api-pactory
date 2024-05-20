@@ -9,7 +9,9 @@
     <meta charset="UTF-8">
     <title>apiPactory</title>
     <link rel="stylesheet" href="../../assets/css/style.css">
-    <?php include "../component/head.php" ?>
+
+    <?php include "../component/head.php" ?> 
+    <!-- 작동안하는듯 이거? -->
 </head>
 
 <body>
@@ -20,7 +22,7 @@
         <div class="board-container">
             <div class="intro__inner">
                 <div class="intro__img2"></div>
-                <h2 class="intro__title">   apiPactory <em>공지 사항</em></h2>
+                <h2 class="intro__title">apiPactory <em>공지사항</em></h2>
              
             </div>
             <!-- // intro end -->
@@ -39,13 +41,12 @@
     $sql = "UPDATE board set boardView = boardView +1 where boardID = {$boardID}";
     $connection -> query($sql);
     
-    $sql = "SELECT b.boardTitle , u.userName , b.regTime , b.boardView , b.boardContents from board b JOIN member u on (b.boardID = u.userID) where b.boardID = {$boardID}";
+    $sql = "SELECT b.boardTitle, u.userName, b.regTime, b.boardView, b.boardContents FROM board b JOIN member u ON (b.userID = u.userID) WHERE b.boardID = {$boardID}";
 
     $result = $connection -> query($sql);
 
     if($result) {
         $info = $result -> fetch_array(MYSQLI_ASSOC);
-
         echo "<tr><th>제목</th><td>".$info['boardTitle']."</td></tr>";
         echo "<tr><th>등록자</th><td>".$info['userName']."</td></tr>";
         echo "<tr><th>등록일</th><td>".date("Y-m-d" , $info['regTime'])."</td></tr>";

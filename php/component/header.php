@@ -17,18 +17,18 @@
             <i class="fas fa-search"></i>
             <input type="text" placeholder="검색어를 입력하세요" class="search-input">
         </div>
-<?php
-    if(isset($_SESSION['userID'])) {
-?>            
-        <a href="php/login/logOutAction.php">로그아웃</a>
-<?php
-    }else {
-?>
-        <a href="php/login/login.php">로그인</a>
-        <a href="#">회원가입</a>
-<?php
-    }
-?>
+        <?php
+            if(isset($_SESSION['userID'])) {
+        ?>            
+                <a href="php/login/logOutAction.php">로그아웃</a>
+        <?php
+            }else {
+        ?>
+                <a href="php/login/login.php">로그인</a>
+                <a href="#">회원가입</a>
+        <?php
+            }
+        ?>
 
     </div>
 </header>

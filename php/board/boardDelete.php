@@ -40,7 +40,7 @@
 <html lang="ko">
 
     <script>
-        location.href = "boardList.php";
+        location.href = "board.php";
     </script>
 </body>
 

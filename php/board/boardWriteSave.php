@@ -1,7 +1,7 @@
 <?php
 include "../connection/connection.php";
 
-$userID = isset($_SESSION['userID']) ? $_SESSION['userID'] : 1;
+$userID = $_SESSION['userID'];
 $boardTitle = mysqli_real_escape_string($connection, $_POST['boardTitle']);    
 $boardContents = mysqli_real_escape_string($connection, $_POST['boardContents']);
 $regTime = time();

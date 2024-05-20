@@ -117,7 +117,7 @@ a {
     text-decoration: underline;
 }
 
-.login .confirm ul {
+.login .submit {
     padding: 20px;
     margin-top: 80px;
     width: 400px;
@@ -130,11 +130,12 @@ a {
 }
 
 
-.login .confirm ul li a {
-    font-size: 16px;
+.login .login__btn {
+    font-size: 14px;
     color: #fff;
     font-family: var(--fontN);
     font-weight: 800;
+    background-color: transparent;
 }
 
 
@@ -399,13 +400,14 @@ a {
     font-weight: 700;
     font-size: 1rem;
 }
- #forget-style ul li {
+
+#forget-style ul li {
     left: 100px;
     position: absolute;
     margin-top: 5px;
 }
 
- #forget-style ul li a {
+#forget-style ul li a {
     color: #4c60d1;
     font-size: 15px;
     font-family: var(--fontN);
@@ -431,7 +433,7 @@ a {
     text-underline-position: under;
 }
 
- #forget-style ul li a:hover {
+#forget-style ul li a:hover {
     text-decoration: underline;
     text-underline-position: under;
 }
