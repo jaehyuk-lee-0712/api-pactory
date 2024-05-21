@@ -13,7 +13,7 @@
         b.tokenID , 
         b.token  
         FROM member a JOIN member_token b on (a.userID = b.userID)
-        WHERE b.token = '$token' 
+        WHERE b.token = '$token'
         and b.deleteYn = 1";
 
     $stmt = $connection -> prepare($sql);
@@ -24,7 +24,9 @@
 
     $stmt -> execute();
     $result = $stmt -> get_result();
+    $info = $result -> fetch_assoc();
 
+    $userID = $info['userID'];
 
     // DB에 token 이 존재하는 지 확인
     if($result -> num_rows >0){
@@ -49,6 +51,7 @@
 
 <?php if($tokenUpdateYn) {?>
 
+<?php include "../component/head.php" ?>
 <?php include "../component/header.php" ?>
 
 <!DOCTYPE html>
@@ -61,7 +64,8 @@
 </head>
 <body>
     <div class="findPass__box">
-        <form action="changePassAction.php" id="changePassAction" method="post">
+        <!-- onsubmit=" return changePass() " -->
+        <form action="" id="changePasswordAction" method="post" onsubmit=" return changePass() ">
             <div class="nav">
                 <ul>
                     <li><a href="/">비밀번호 변경</a></li>
@@ -72,6 +76,7 @@
                 <div>
                     <input type="password" name="userPass" id="userPass" placeholder="새로운 비밀번호" autocomplete="off"
                         class="input-style" required>
+                        <input type="hidden" name="userID" id="userID" value="<?php echo $userID; ?>">
                 </div>
             </div>
             <div class="confirm">
@@ -82,6 +87,8 @@
         </form>
     </div>
     <script>
+        var userID = "<?php echo $userID; ?>";
+
         function changePass() {
             changePassForm = document.getElementById("changePassAction");
             userNewPass = document.getElementById("userPass").value;
@@ -89,7 +96,20 @@
             if(userNewPass == "") {
                 alert("새로운 비밀번호를 입력해주세요")
             }else {
-                
+                $.ajax({
+                type: "POST",
+                url: "changePasswordAction.php",
+                data: {"userPass": userNewPass, "userID": userID},
+                dataType: "json",
+                success: function(data) {
+                    if (data.result == "success") {
+                       alert("비밀번호를 변경하였습니다.")
+                        window.location.href = "../login/login.php";
+                    } else {
+                       alert("비밀번호 변경에 실패했습니다.")
+                    }
+                }
+            });
             }
         }
     </script>

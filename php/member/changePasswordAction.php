@@ -1,47 +1,39 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <!DOCTYPE html>
-    <html lang="ko">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>비밀번호 변경</title>
-        <link rel="stylesheet" href="../../assets/css/style.css">
-    </head>
-    <body>
-        <div class="findPass__box">
-            <form action="changePassAction.php" id="changePassAction" method="post">
-                <div class="nav">
-                    <ul>
-                        <li><a href="/">비밀번호 변경</a></li>
-                        <span>새로운 비밀번호를 입력해주세요</span>
-                    </ul>   
-                </div>
-                <div class="idbox">
-                    <div>
-                        <input type="password" name="userPass" id="userPass" placeholder="새로운 비밀번호" autocomplete="off"
-                            class="input-style" required>
-                    </div>
-                </div>
-                <div class="confirm">
-                    <ul onclick='changePass()'>
-                        <li class="confirmBtn"><a href="#">비밀번호 변경하기</a></li>
-                    </ul>
-                </div>
-            </form>
-        </div>
-        <script>
-         
-        </script>
-    </body>
-    </html>
-    
-</body>
+<?php
+    include "../connection/connection.php";
 
-</html>
+    $type = $_POST['type'];
+    $userPass = $_POST['userPass'];
+    $userID = $_POST['userID'];
+
+    $jsonResult = "bad";
+
+    if(isset($userPass)) {
+        $hashePass = password_hash($userPass , PASSWORD_DEFAULT) ;
+
+        $sql ="UPDATE member set userPass = '$hashePass' where userID = $userID";
+
+        $stmt = $connection->prepare($sql);
+
+        if ($stmt === false) {
+            // prepare가 실패한 경우
+            echo "데이터베이스 쿼리 준비에 실패했습니다." . $connection->error;
+            echo $sql;
+            exit;
+        }
+
+        if ($stmt->execute()) {
+            if ($stmt->affected_rows > 0) {
+                $jsonResult = "success";
+            } else {
+                $jsonResult = "변경된 행이 없습니다.";
+            }
+        } else {
+            $jsonResult = "쿼리 실행에 실패했습니다: " . $stmt->error;
+        }
+    
+        $stmt->close();
+    }
+
+
+    echo json_encode(array("result" => $jsonResult));  
+?>

@@ -62,6 +62,7 @@
                     $mail->Username   = 'dlwogur171215';                     //SMTP username
                     $mail->Password   = 'vmfleja1215#';                               //SMTP password
                     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+                    $mail->CharSet = "UTF-8";
                     $mail->Port       = 465;    
                     
                     //Recipients

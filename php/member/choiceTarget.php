@@ -1,4 +1,4 @@
-    <?php
+<?php
         include "../connection/connection.php";
     ?>
 
@@ -18,14 +18,18 @@
                 .findPass__box , .findID__Box {
                     display : none;
                 }
+
+                .modal {
+
+                }
             </style>
     </head>
 
     <body>
         <div id="wrap">
     <?php
-
-        include "../component/header.php";
+        include "../component/head.php";
+        include "../component/header.php"  ;
 
     ?>
             <div>
@@ -54,16 +58,16 @@
                                 </div>
                             </div>
                             <div class="findID__Box">
-                                <form action="" id="findIDBox" method="POST">
+                                <form action="findID.php" id="findIDBox" method="POST" class="IdForm">
                                     <div class="nav">
                                         <ul>
                                             <li><a href="/">Find Email</a></li>
-                                            <span>가입시 작성한 이름과 생년월일을 작성해주세요.</span>
+                                            <span>가입시 입력한 이름과 생년월일을 작성해주세요.</span>
                                         </ul>   
                                     </div>
                                     <div class="idbox">
                                         <div>
-                                            <input type="email" name="userName" id="userName" placeholder="이름을 입력하세요" autocomplete="off"
+                                            <input type="text" name="userName" id="userName" placeholder="이름을 입력하세요" autocomplete="off"
                                                 class="input-style" required>
                                         </div>
                                     </div>
@@ -87,12 +91,19 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="confirm">
+                                    <div class="id__confirm confirm">
                                         <ul>
                                             <li><a href="#">Find!</a></li>
                                         </ul>
                                     </div>
                                 </form>
+                                <div class="modal">
+                                    <span class="modal__title"><a href="#">검색결과</a></span>
+                                    <ul class="modal__list">
+                                        
+                                    </ul>
+                                    <a class="modal__close">닫기</a>
+                                </div>
                             </div>
                             <div class="findPass__box">
                                 <form action="findPass.php" id="findPassForm" method="post">
@@ -139,36 +150,90 @@
         
         
         <script>
-
+        document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("findEmail").addEventListener("click", function() {
             document.querySelector(".findID__Box").style.display = "block";
             document.querySelector(".findPass__box").style.display = "none";
             document.querySelector(".find").style.display = "none";
         });
-    
+
         document.getElementById("findPass").addEventListener("click", function() {
             document.querySelector(".findID__Box").style.display = "none";
             document.querySelector(".findPass__box").style.display = "block";
             document.querySelector(".find").style.display = "none";
         });
 
-        function goBack(){
-            document.querySelector(".findID__Box").style.display = "none";
-            document.querySelector(".findPass__box").style.display = "none";
-            document.querySelector(".find").style.display = "block";
-        }
+        document.querySelector(".id__confirm ul").addEventListener("click", function() {
+            
+            var userName = document.getElementById("userName").value;
+            var userBirth = document.getElementById("userBirth").value;
 
-            function findPass() {
-                findPassForm = document.getElementById("findPassForm") 
-                userEmail = document.getElementById("userEmail").value;
+            const modalList = document.querySelector('.modal__list');
 
-                if(userEmail === "") {
-                    alert("이메일을 입력해주세요.");
-                }else {
-                    findPassForm.submit();
+            if (userName !== "" && userBirth !== "") {
+                $.ajax({
+                    type : "POST" , 
+                    url : "findID.php" ,
+                    data : {"userName" : userName , "userBirth" : userBirth} ,
+                    dataType : "json" ,
+                    success: function (data) {
+                            if(data.status === 'success') {
+                                let rsList = data.rows;
+                                let cnt = data.cnt;
+                                rsList.forEach(item => {
+                                    const li = document.createElement('li');
+                                    const a = document.createElement('a');
+                                    a.textContent = item.userEmail;
+                                    a.href = '#';
+                                    li.appendChild(a);
+                                    modalList.appendChild(li);
+                                });
+
+                                const modalContainer = document.querySelector(".modal");    
+
+                                // 모달 표시
+                                modalContainer.style.display = "block";
+                                modalClose();
+                            }else {
+                                alert(data.msg);
+                            }
+                    }
+                });
+            } else {
+                if (userName === "") {
+                    alert("성함을 입력해주세요.");
+                } else if (userBirth === "") {
+                    alert("생년월일을 입력해주세요.");
                 }
             }
-        </script>
+        });
+    });
+
+    function goBack() {
+        document.querySelector(".findID__Box").style.display = "none";
+        document.querySelector(".findPass__box").style.display = "none";
+        document.querySelector(".find").style.display = "block";
+    }
+
+    function findPass() {
+        var findPassForm = document.getElementById("findPassForm");
+        var userEmail = document.getElementById("userEmail").value;
+
+        if (userEmail === "") {
+            alert("이메일을 입력해주세요.");
+        } else {
+            findPassForm.submit();
+        }
+    }
+
+    function modalClose() {
+        const closeBtn = document.querySelector(".modal__close");
+        closeBtn.addEventListener("click" , function() {
+            document.querySelector(".modal").style.display = "none";
+        })
+    }
+</script>
+
     </body>
 
     </html> 
