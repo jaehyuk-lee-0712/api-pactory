@@ -24,8 +24,8 @@
 <?php
     }else {
 ?>
-        <a href="../login/login.php">로그인</a>
-        <a href="#">회원가입</a>
+        <a href="../login/login.php?action=login">로그인</a>
+        <a href="../login/login.php?action=signup">회원가입</a>
 <?php
     }
 ?>

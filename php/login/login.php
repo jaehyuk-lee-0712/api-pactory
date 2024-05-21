@@ -10,7 +10,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
     <link rel="stylesheet" href="../../assets/css/style.css">
-    <link rel="stylesheet" href="../../assets/css/logintemp.css">
     <link
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
@@ -25,7 +24,7 @@
 ?>
         <div>
             <!-- login form -->
-            <form action="loginAction.php" id="loginForm" method ="post">
+            <!-- <form action="loginAction.php" id="loginForm" method ="post">
                 <article id="main">
                     <div class="container">
                         <div class="login">
@@ -64,7 +63,7 @@
                         </div>
                     </div>
                 </article>
-            </form>
+            </form> -->
             <!-- // login form end -->
             
             <!-- // signup form start -->
@@ -154,7 +153,7 @@
             dataType: "json",
             success: function(data) {
                 if (data.result == "good") {
-                    // $("#userEmailComment").text("➟ 사용 가능한 이메일입니다.");
+                    $("#userEmailComment").text("➟ 사용 가능한 이메일입니다.");
                     isEmailCheck = true;
                     // 중복 여부 확인 후 회원가입 실행
                     signUp();
@@ -168,6 +167,7 @@
         function joinChecks() {
             // 메세지 초기화
             $(".msg").text("");
+            console.log(".msg");
 
             let userEmail = $("#userEmail").val();
             let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
@@ -212,7 +212,7 @@
 
 
 
-            // 생년월일 검사
+            // 연락처 검사
             let userBirth = $("#userBirth").val();
             let BirthPattern = /^(19|20)\d{2}(0[1-9]|1[0-2])(0[1-9]|[12]\d|3[01])$/;
 

@@ -52,8 +52,6 @@
     }
 ?>
 
-            <!-- <div id="profile">
-            </div> -->
         </div>
     </header>
     <!-- <?php
