@@ -106,7 +106,7 @@
                                 </div>
                             </div>
                             <div class="findPass__box">
-                                <form action="findPass.php" id="findPassForm" method="post">
+                                <form action="" id="findPassForm" method="post">
                                     <div class="nav">
                                         <ul>
                                             <li><a href="/">Find PASS</a></li>
@@ -222,7 +222,24 @@
         if (userEmail === "") {
             alert("이메일을 입력해주세요.");
         } else {
-            findPassForm.submit();
+            $.ajax({
+                type : "POST" , 
+                    url : "findPass.php" ,
+                    data : {"userEmail" : userEmail} ,
+                    dataType : "json" ,
+                    success: function (data) {
+                            if(data.status === 'success') {
+                               alert(data.msg);
+                               window.location.href="../login/login.php";
+                            }else {
+                                alert(data.msg);
+                            }
+                    },
+                    error : function(xhr, status, error) {
+                        alert("Error Ajax" + error);
+                    }
+                    
+            })
         }
     }
 

@@ -20,8 +20,8 @@
         $stmt = $connection->prepare($sql);
         if ($stmt === false) {
             // prepare가 실패한 경우
-            echo "데이터베이스 쿼리 준비에 실패했습니다." . $connection->error;
-            exit;
+            $response['status'] = 'error';
+            $response['msg'] = '데이터베이스 연결 실패.';
         }
 
         $stmt->execute();
@@ -55,7 +55,7 @@
 
                 try {
                     //Server settings
-                    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+                    // $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
                     $mail->isSMTP();                                            //Send using SMTP
                     $mail->Host       = 'smtp.naver.com';                     //Set the SMTP server to send through
                     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
@@ -83,24 +83,32 @@
                 
                     $mail->send();
 
-                    echo "<script>alert('입력하신 이메일로 암호 변경 이메일이 발송되었습니다.')</script>";
-                    echo "<script>window.location.href = '/php/login/login.php'</script>";
+                    // echo "<script>alert('입력하신 이메일로 암호 변경 이메일이 발송되었습니다.')</script>";
+                    // echo "<script>window.location.href = '/php/login/login.php'</script>";
                     
+                    $response['status'] = 'success';
+                    $response['msg'] = '입력하신 이메일로 암호 변경 이메일을 발송했습니다.';
+
+
                 } catch (Exception $e) {
-                    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+                    // echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+                    $response['status'] = 'error';
+                    $response['msg'] = '암호 변경 이메일 발솔 실패. 관리자 문의 바람';
                 }
             }
 
             // 비밀번호 재설정 링크 생성
             // $resetLink = "http://example.com/reset_password.php?token=" . $token;  
         } else {
-            echo "해당 이메일 주소를 가진 사용자를 찾을 수 없습니다." . $sql;
+           $response['status']='error';
+           $response['msg'] = '검색된 이메일이 존재하지 않습니다.';
+
         }
        
 
     }
 
    
-
+    echo json_encode($response); 
 ?>
 
