@@ -1,9 +1,9 @@
 <?php
 
 $host = "localhost";
-$user = "dlwogur1215";
-$pw = "vmfleja1215#";
-$db = "dlwogur1215";
+$user = "meowon1019";
+$pw = "eodnjdl1019!";
+$db = "meowon1019";
 
 $connection = new mysqli($host , $user , $pw , $db);
 $connection -> set_charset("utf8");
