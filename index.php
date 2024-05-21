@@ -54,11 +54,6 @@
 
         </div>
     </header>
-    <!-- <?php
-
-        include "php/component/header.php";
-
-    ?> -->
     <main id="main">
         <div class="main-container">
             <div class="content1">

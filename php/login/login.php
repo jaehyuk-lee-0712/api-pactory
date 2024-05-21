@@ -24,7 +24,7 @@
 ?>
         <div>
             <!-- login form -->
-            <!-- <form action="loginAction.php" id="loginForm" method ="post">
+            <form action="loginAction.php" id="loginForm" method ="post">
                 <article id="main">
                     <div class="container">
                         <div class="login">
@@ -63,7 +63,7 @@
                         </div>
                     </div>
                 </article>
-            </form> -->
+            </form>
             <!-- // login form end -->
             
             <!-- // signup form start -->
@@ -115,21 +115,11 @@
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<!-- <script>
-        document.addEventListener("DOMContentLoaded", function () {
-        
-        });
-
-        function goSignUp() {
-            document.getElementById('loginForm').style.display = 'none';
-        }
-
-</script> -->
 <script>
     let isEmailCheck = false;
 
     function emailChecking() {
-    let userEmail = $("#userEmail").val();
+    let userEmail = $("#signInForm #userEmail").val();
 
     if (userEmail == null || userEmail === '') {
         $("#userEmailComment").text("➟ 이메일을 입력해주세요!");
@@ -138,7 +128,7 @@
     } else {
         let getuserEmail = RegExp(/^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([\-.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i);
 
-        if (!getuserEmail.test($("#userEmail").val())) {
+        if (!getuserEmail.test($("#signInForm #userEmail").val())) {
             $("#userEmailComment").text("➟ 올바른 이메일 주소를 입력해주세요");
             $("#userEmail").val('');
             $("#userEmail").focus();
@@ -167,9 +157,8 @@
         function joinChecks() {
             // 메세지 초기화
             $(".msg").text("");
-            console.log(".msg");
 
-            let userEmail = $("#userEmail").val();
+            let userEmail = $("#signInForm #userEmail").val();
             let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
 
             if (userEmail === '') {

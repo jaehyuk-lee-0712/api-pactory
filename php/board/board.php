@@ -9,7 +9,12 @@ $searchKeyword = isset($_GET['searchKeyword']) ? $connection->real_escape_string
 // 게시물 가져오기 쿼리
 $offset = ($page - 1) * $viewNum;
 $searchCondition = $searchKeyword ? "AND boardTitle LIKE '%$searchKeyword%'" : '';
-$boardQuery = "SELECT * FROM board WHERE boardDelete = 1 $searchCondition ORDER BY boardID DESC LIMIT $offset, $viewNum";
+$boardQuery = "SELECT b.*, m.userName
+               FROM board b
+               JOIN member m ON b.userID = m.userID
+               WHERE b.boardDelete = 1 $searchCondition
+               ORDER BY b.boardID DESC
+               LIMIT $offset, $viewNum";
 $boardResult = $connection->query($boardQuery);
 // 총 게시물 수 쿼리
 $totalPostsQuery = "SELECT COUNT(*) as total FROM board WHERE boardDelete = 1 $searchCondition";
@@ -45,7 +50,9 @@ $boardTotalCnt = ceil($totalPosts / $viewNum);
                                     <legend class="blind">게시판 검색 영역</legend>
                                     <input type="search" name="searchKeyword" id="searchKeyword" placeholder="검색어를 입력하세요!" value="<?php echo htmlspecialchars($searchKeyword); ?>" required>
                                     <button type="submit" class="btn__style">검색</button>
-                                    <button type="button" class="write__btn" ><a href="boardWrite.php">글쓰기</a></button>
+                                    <?php if (isset($_SESSION['userID'])): ?>
+                                        <button type="button" class="write__btn"><a href="boardWrite.php">글쓰기</a></button>
+                                    <?php endif; ?>
                                 </fieldset>
                             </form>
                         </div>
@@ -75,8 +82,8 @@ $boardTotalCnt = ceil($totalPosts / $viewNum);
                                         <tr>
                                             <td><?php echo $row['boardID']; ?></td>
                                             <td><a href="boardView.php?boardID=<?php echo $row['boardID']; ?>"><?php echo htmlspecialchars($row['boardTitle']); ?></a></td>
-                                            <td><?php echo htmlspecialchars($row['userID']); ?></td>
-                                            <td><?php echo date('Y-m-d', strtotime($row['regTime'])); ?></td>
+                                             <td><?php echo htmlspecialchars($row['userName']); ?></td>
+                                            <td><?php echo date('Y-m-d', $row['regTime']); ?></td>
                                             <td><?php echo $row['boardView']; ?></td>
                                         </tr>
                                     <?php endwhile; ?>
