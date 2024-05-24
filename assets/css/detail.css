@@ -1,0 +1,191 @@
+.detail__inner {
+    height: 200px;
+    width: 100%;
+    display: flex;
+}
+
+.detail-container {
+    width: 1402px;
+    height: 1020px;
+    position: relative;
+}
+
+.detail__inner>img {
+    margin: 100px 0 100px 100px;
+    width: 100px;
+    height: 100px;
+
+}
+
+.detail__title {
+    margin: 100px;
+}
+
+.detail__title h2 {
+    font-size: 2rem;
+}
+
+/* detail__box */
+
+.detail__box {
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+}
+
+.detail__box .tutorials-container {
+    height: 500px;
+    width: 50%;
+    border: 2px solid var(--white400);
+}
+
+.tutorial-header {
+    height: 80px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    padding: 20px 1px 1px 1px;
+    border-bottom: 2px solid var(--white400);
+}
+
+.th-Title {
+    width: 200px;
+    height: 40px;
+    font-size: 1.5rem;
+    margin-left: 20px;
+}
+
+.tutorial-title {
+    margin-left: 10px;
+}
+
+.add-btn {
+    font-size: 1rem;
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    background-color: #b44343;
+    cursor: pointer;
+    color: var(--white);
+    right: 20px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.tutorial-code {
+    background-color: var(--white);
+    border: 1px solid var(--white600);
+    font-size: 0.8rem;
+    height: 40px;
+    width: 450px;
+    margin: 20px 0 20px 30px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.C-text,
+.T-text {
+    margin: 0 20px 0 20px;
+}
+
+.T-title>p {
+    width: 200px;
+}
+
+.T-title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.tutorial-code>span {
+    margin-left: 10px;
+}
+
+
+/* tutorial */
+
+
+
+.detail__box .code-container {
+    height: 500px;
+    width: 50%;
+    border: 2px solid var(--white400);
+
+}
+
+.code-header {
+    height: 80px;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    padding: 25px 0 0 0;
+    font-size: 1.2rem;
+    border-bottom: 2px solid var(--white400);
+}
+
+.Code-title {
+    margin-left: 20px;
+}
+
+#code-language {
+    padding: 2px;
+    margin: 0 0 0 20px;
+}
+
+/* code */
+
+.scroll {
+    height: 416px;
+    overflow-y: scroll;
+    white-space: pre-line;
+    line-height: 1.5;
+}
+
+.scroll::-webkit-scrollbar {
+    width: 10px;
+}
+
+.scroll::-webkit-scrollbar-track {
+    background-color: var(--white300);
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    background-color: var(--white600);
+    border-radius: 20px;
+}
+
+.scroll::-webkit-scrollbar-button {
+    display: none;
+}
+
+.scroll2 {
+    height: 416px;
+    overflow-y: scroll;
+    white-space: pre-line;
+    line-height: 1.5;
+}
+
+.scroll2::-webkit-scrollbar {
+    width: 10px;
+}
+
+.scroll2::-webkit-scrollbar-track {
+    background-color: var(--white300);
+}
+
+.scroll2::-webkit-scrollbar-thumb {
+    background-color: var(--white600);
+    border-radius: 20px;
+}
+
+.scroll2::-webkit-scrollbar-button {
+    display: none;
+}
