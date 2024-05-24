@@ -6,7 +6,7 @@
         </div>
         <div id="menu">
             <ul>
-                <li><a href="#">api 상품</a></li>
+                <li><a href="../product/product.php">api 상품</a></li>
                 <li><a href="#">카테고리</a></li>
                 <li><a href="../board/board.php">공지사항</a></li>
             </ul>
