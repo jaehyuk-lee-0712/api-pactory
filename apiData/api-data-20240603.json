@@ -1,0 +1,1142 @@
+[
+    {
+        "apiName": "발주서 목록 조회(분단위 전체)",
+        "apiStie": "https://developers.coupangcorp.com/hc/ko/articles/360033919573-%EB%B0%9C%EC%A3%BC%EC%84%9C-%EB%AA%A9%EB%A1%9D-%EC%A1%B0%ED%9A%8C-%EC%9D%BC%EB%8B%A8%EC%9C%84-%ED%8E%98%EC%9D%B4%EC%A7%95",
+        "apiImgUrl": "https://play-lh.googleusercontent.com/X5-X2S0t7G9dTGrPftk-5hXijqRDhwWKxGDs2gBm_kNPcAlO3re4exC_8nekvDhz-H0=w240-h480-rw",
+        "category": "delivery",
+        "apiDesc": "발주서 목록을 하루단위 페이징 형태로 조회합니다."
+    },
+    {
+        "apiName": "배송상태 변경 히스토리 조회",
+        "apiStie": "https://developers.coupangcorp.com/hc/ko/articles/360033792934-%EB%B0%B0%EC%86%A1%EC%83%81%ED%83%9C-%EB%B3%80%EA%B2%BD-%ED%9E%88%EC%8A%A4%ED%86%A0%EB%A6%AC-%EC%A1%B0%ED%9A%8C",
+        "apiImgUrl": "https://play-lh.googleusercontent.com/X5-X2S0t7G9dTGrPftk-5hXijqRDhwWKxGDs2gBm_kNPcAlO3re4exC_8nekvDhz-H0=w240-h480-rw",
+        "category": "delivery",
+        "apiDesc": "특정 주문에 대한 배송상태 히스토리를 조회합니다."
+    },
+    {
+        "apiName": "상품준비중 처리",
+        "apiStie": "https://developers.coupangcorp.com/hc/ko/articles/360033792994-%EC%83%81%ED%92%88%EC%A4%80%EB%B9%84%EC%A4%91-%EC%B2%98%EB%A6%AC",
+        "apiImgUrl": "https://play-lh.googleusercontent.com/X5-X2S0t7G9dTGrPftk-5hXijqRDhwWKxGDs2gBm_kNPcAlO3re4exC_8nekvDhz-H0=w240-h480-rw",
+        "category": "delivery",
+        "apiDesc": "주문상태를 '결제완료' 에서 '상품준비중'으로 변경합니다. 상태변경을 요청한 주문 중 취소 건이 있으면 Partial Error를 리턴합니다."
+    },
+    {
+        "apiName": "송장업로드 처리",
+        "apiStie": "https://developers.coupangcorp.com/hc/ko/articles/360033793014-%EC%86%A1%EC%9E%A5%EC%97%85%EB%A1%9C%EB%93%9C-%EC%B2%98%EB%A6%AC",
+        "apiImgUrl": "https://play-lh.googleusercontent.com/X5-X2S0t7G9dTGrPftk-5hXijqRDhwWKxGDs2gBm_kNPcAlO3re4exC_8nekvDhz-H0=w240-h480-rw",
+        "category": "delivery",
+        "apiDesc": "송장을 업로드하여 주문을 배송지시 상태로 변경합니다. 상품준비중 상태의 주문에 대해서만 송장업로드가 가능합니다."
+    },
+    {
+        "apiName": "송장업데이트 처리",
+        "apiStie": "https://developers.coupangcorp.com/hc/ko/articles/360034320653-%EC%86%A1%EC%9E%A5%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8-%EC%B2%98%EB%A6%AC",
+        "apiImgUrl": "https://play-lh.googleusercontent.com/X5-X2S0t7G9dTGrPftk-5hXijqRDhwWKxGDs2gBm_kNPcAlO3re4exC_8nekvDhz-H0=w240-h480-rw",
+        "category": "delivery",
+        "apiDesc": "잘못 등록한 운송장 내용을 변경합니다. 변경된 운송장의 배송상태는 배송지시(DEPARTURE)로 변경되며 이후 트래킹 정보 연동에 따라 변경될 수 있습니다."
+    },
+    {
+        "apiName": "출고중지완료  처리",
+        "apiStie": "https://developers.coupangcorp.com/hc/ko/articles/360034320673-%EC%B6%9C%EA%B3%A0%EC%A4%91%EC%A7%80%EC%99%84%EB%A3%8C-%EC%B2%98%EB%A6%AC",
+        "apiImgUrl": "https://play-lh.googleusercontent.com/X5-X2S0t7G9dTGrPftk-5hXijqRDhwWKxGDs2gBm_kNPcAlO3re4exC_8nekvDhz-H0=w240-h480-rw",
+        "category": "delivery",
+        "apiDesc": "고객이 주문을 취소처리 하여 반품요청목록 조회 시 상태가 출고중지요청이거나 반품접수미확인이면서 releaseStatus가 'N' 일 경우에 사용가능합니다. 아직 상품을 발송하지 않아, 고객 요청대로 상품을 출고하지 않았을 때 사용합니다."
+    },
+    {
+        "apiName": "이미출고  처리",
+        "apiStie": "https://developers.coupangcorp.com/hc/ko/articles/360033793034-%EC%9D%B4%EB%AF%B8%EC%B6%9C%EA%B3%A0-%EC%B2%98%EB%A6%AC",
+        "apiImgUrl": "https://play-lh.googleusercontent.com/X5-X2S0t7G9dTGrPftk-5hXijqRDhwWKxGDs2gBm_kNPcAlO3re4exC_8nekvDhz-H0=w240-h480-rw",
+        "category": "delivery",
+        "apiDesc": "고객이 주문을 취소처리 하여 반품요청목록 조회 시 취소진행 상태가 출고중지요청이거나 반품접수미확인이면서 releaseStatus가 'N' 일 경우에 사용가능합니다. 이미 판매자가 상품을 발송한 상태일 때 사용합니다."
+    },
+    {
+        "apiName": "배송지 가져오기",
+        "apiStie": "https://developers.kakao.com/docs/latest/ko/kakaologin/rest-api#shipping-address",
+        "apiImgUrl": "https://cs.kakao.com/img/cskakaocom/pc/thumb/thumb_kakaotalk.png",
+        "category": "delivery",
+        "apiDesc": "특정 사용자의 배송지 정보를 가져옵니다. 이 API는 액세스 토큰으로 요청하는 방식, 서비스 관리자가 애플리케이션(이하 앱)의 어드민 키와 회원번호로 요청하는 방식 두 가지로 제공됩니다. 서버에서 배송지를 요청할 때는 요청 헤더(Header)에 사용자 토큰 대신 어드민 키를 사용하고, 배송지를 조회할 사용자를 지정해야 합니다."
+    },
+    {
+        "apiName": "네이버 회원 프로필 조회 API",
+        "apiSite": "https://developers.naver.com/docs/login/profile/profile.md",
+        "apiImgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRO9IVGavttBPk_RofxQU3Yy_rQ_T6tZX2qw&s",
+        "category": "member",
+        "apiDesc": "네이버 로그인을 통해 인증받은 받고 정보 제공에 동의한 회원에 대해 회원 메일 주소, 별명, 프로필 사진, 생일, 연령대 값을 조회할 수 있는 로그인 오픈 API입니다."
+    },
+    {
+        "apiName": "네이버 로그인 API 명세",
+        "apiSite": "https://developers.naver.com/docs/login/api/api.md",
+        "apiImgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRO9IVGavttBPk_RofxQU3Yy_rQ_T6tZX2qw&s",
+        "category": "member",
+        "apiDesc": "네이버 로그인 API는 네이버 로그인 인증 요청 API, 접근 토큰 발급/갱신/삭제 요청API로 구성되어 있습니다. 네이버 로그인 인증 요청 API는 여러분의 웹 또는 앱에 네이버 로그인 화면을 띄우는 API입니다. "
+    },
+    {
+        "apiName": "비즈니스용 Facebook 로그인",
+        "apiSite": "https://developers.facebook.com/docs/facebook-login/facebook-login-for-business",
+        "apiImgUrl": "https://cdn.icon-icons.com/icons2/2415/PNG/512/facebook_original_logo_icon_146526.png",
+        "category": "member",
+        "apiDesc": "비즈니스용 Facebook 로그인은 기술 제공업체와 비즈니스 클라이언트의 자산에 액세스해야 하는 비즈니스 앱 개발자를 위해 고안된 인증 및 승인 솔루션입니다."
+    },
+    {
+        "apiName": "구글 로그인",
+        "apiSite": "https://cloud.google.com/identity-platform/docs/use-rest-api?hl=ko",
+        "apiImgUrl": "https://blog.kakaocdn.net/dn/HDY7T/btrY2our4Rw/Fw6bz0QroBUp1YxglkkwEK/img.webp",
+        "category": "member",
+        "apiDesc": "Identity Platform REST API를 사용하여 사용자 로그인 및 토큰 작업 등의 일반적인 사용자 작업을 수행하는 방법을 보여줍니다."
+    },
+    {
+        "apiName": "인가 코드 받기",
+        "apiSite": "https://developers.kakao.com/docs/latest/ko/kakaologin/rest-api#request-code",
+        "apiImgUrl": "https://cs.kakao.com/img/cskakaocom/pc/thumb/thumb_kakaotalk.png",
+        "category": "member",
+        "apiDesc": "카카오 로그인 동의 화면을 호출하고, 사용자 동의를 거쳐 인가 코드를 발급합니다. 동의 화면은 앱에 설정된 동의항목에 대해 사용자에게 인가(동의)를 구합니다."
+    },
+    {
+        "apiName": "토큰 받기",
+        "apiSite": "https://developers.kakao.com/docs/latest/ko/kakaologin/rest-api#request-token",
+        "apiImgUrl": "https://cs.kakao.com/img/cskakaocom/pc/thumb/thumb_kakaotalk.png",
+        "category": "member",
+        "apiDesc": "인가 코드로 토큰 발급을 요청합니다. 인가 코드 받기만으로는 카카오 로그인이 완료되지 않으며, 토큰 받기까지 마쳐야 카카오 로그인을 정상적으로 완료할 수 있습니다."
+    },
+    {
+        "apiName": "로그아웃",
+        "apiSite": "https://developers.kakao.com/docs/latest/ko/kakaologin/rest-api#logout",
+        "apiImgUrl": "https://cs.kakao.com/img/cskakaocom/pc/thumb/thumb_kakaotalk.png",
+        "category": "member",
+        "apiDesc": "사용자 액세스 토큰과 리프레시 토큰을 모두 만료시킵니다. "
+    },
+    {
+        "apiName": "카카오계정과 함께 로그아웃",
+        "apiSite": "https://developers.kakao.com/docs/latest/ko/kakaologin/rest-api#logout-of-service-and-kakaoaccount",
+        "apiImgUrl": "https://cs.kakao.com/img/cskakaocom/pc/thumb/thumb_kakaotalk.png",
+        "category": "member",
+        "apiDesc": "카카오계정과 함께 로그아웃은 웹 브라우저에 로그인된 카카오계정의 세션을 만료시키고, 서비스에서도 로그아웃 처리할 때 사용하는 로그아웃 추가 기능입니다. "
+    },
+    {
+        "apiName": "연결 끊기",
+        "apiSite": "https://developers.kakao.com/docs/latest/ko/kakaologin/rest-api#unlink",
+        "apiImgUrl": "https://cs.kakao.com/img/cskakaocom/pc/thumb/thumb_kakaotalk.png",
+        "category": "member",
+        "apiDesc": "연결 끊기는 앱과 사용자 카카오계정의 연결을 끊는 기능입니다. "
+    },
+    {
+        "apiName": "사용자 정보 가져오기",
+        "apiSite": "https://developers.kakao.com/docs/latest/ko/kakaologin/rest-api#req-user-info",
+        "apiImgUrl": "https://cs.kakao.com/img/cskakaocom/pc/thumb/thumb_kakaotalk.png",
+        "category": "member",
+        "apiDesc": "현재 로그인한 사용자의 정보를 불러옵니다."
+    },
+    {
+        "apiName": "여러 사용자 정보 가져오기",
+        "apiSite": "https://developers.kakao.com/docs/latest/ko/kakaologin/rest-api#user-info-list",
+        "apiImgUrl": "https://cs.kakao.com/img/cskakaocom/pc/thumb/thumb_kakaotalk.png",
+        "category": "member",
+        "apiDesc": "앱 사용자 여러 명의 정보를 불러옵니다. 이 API는 관리자를 위한 것으로, 앱 어드민 키를 사용하기 때문에 반드시 서버에서만 호출해야 합니다."
+    },
+    {
+        "apiName": "사용자 목록 가져오기",
+        "apiSite": "https://developers.kakao.com/docs/latest/ko/kakaologin/rest-api#user-list",
+        "apiImgUrl": "https://cs.kakao.com/img/cskakaocom/pc/thumb/thumb_kakaotalk.png",
+        "category": "member",
+        "apiDesc": "앱의 사용자 회원번호 목록을 제공하는 API입니다. 이 API는 관리자를 위한 것으로, 앱 어드민 키를 사용하기 때문에 반드시 서버에서만 호출해야 합니다."
+    },
+    {
+        "apiName": "사용자 정보 저장하기",
+        "apiSite": "https://developers.kakao.com/docs/latest/ko/kakaologin/rest-api#properties",
+        "apiImgUrl": "https://cs.kakao.com/img/cskakaocom/pc/thumb/thumb_kakaotalk.png",
+        "category": "member",
+        "apiDesc": "사용자 프로퍼티에 값을 저장합니다. 키 값은 [내 애플리케이션] > [카카오 로그인] > [사용자 프로퍼티]에 정의한 값을 사용해야 합니다."
+    },
+    {
+        "apiName": "목록 가져오기",
+        "apiStie": " https://developers.kakao.com/docs/latest/ko/talkcalendar/rest-api#calendar-get-list",
+        "apiImgUrl": "https://cs.kakao.com/img/cskakaocom/pc/thumb/thumb_kakaotalk.png",
+        "category": "calendar",
+        "apiDesc": "사용자 캘린더의 목록을 가져옵니다."
+    },
+    {
+        "apiName": "생성하기: 서브 캘린더",
+        "apiStie": "https://developers.kakao.com/docs/latest/ko/talkcalendar/rest-api#calendar-create-sub",
+        "apiImgUrl": "https://play-lh.googleusercontent.com/X5-X2S0t7G9dTGrPftk-5hXijqRDhwWKxGDs2gBm_kNPcAlO3re4exC_8nekvDhz-H0=w240-h480-rw",
+        "category": "calendar",
+        "apiDesc": "사용자 캘린더에 새로운 서브 캘린더를 생성합니다. 생성한 서브 캘린더에 일반 일정 생성하기 또는 공개 일정 > 사용자 캘린더에 추가하기로 서비스의 일정을 추가할 수 있습니다. 액세스 토큰을 헤더에 담아 파라미터와 함께 POST로 요청합니다. 파라미터로 생성할 캘린더의 이름, 색상, 일반 일정의 기본 알림 설정값을 지정할 수 있습니다."
+    },
+    {
+        "apiName": "서브 캘린더 수정하기",
+        "apiSite": "https://developers.kakao.com/docs/latest/ko/talkcalendar/rest-api#calendar-modify",
+        "apiImgUrl": "https://cs.kakao.com/img/cskakaocom/pc/thumb/thumb_kakaotalk.png",
+        "category": "calendar",
+        "apiDesc": "사용자의 특정 서브 캘린더 설정을 수정합니다. 다른 서비스에서 생성한 서브 캘린더는 수정할 수 없습니다. 서비스에서 직접 생성한 서브 캘린더만 수정 가능합니다."
+    },
+    {
+        "apiName": "서브 캘린더 삭제하기",
+        "apiSite": "https://developers.kakao.com/docs/latest/ko/talkcalendar/rest-api#calendar-delete-sub",
+        "apiImgUrl": "https://cs.kakao.com/img/cskakaocom/pc/thumb/thumb_kakaotalk.png",
+        "category": "calendar",
+        "apiDesc": "사용자의 특정 서브 캘린더를 삭제합니다. 다른 서비스에서 생성한 서브 캘린더는 삭제할 수 없습니다. 서비스에서 직접 생성한 서브 캘린더만 삭제 가능합니다."
+    },
+    {
+        "apiName": "일반 일정 생성하기",
+        "apiSite": "https://developers.kakao.com/docs/latest/ko/talkcalendar/rest-api#common-event-create",
+        "apiImgUrl": "https://cs.kakao.com/img/cskakaocom/pc/thumb/thumb_kakaotalk.png",
+        "category": "calendar",
+        "apiDesc": "사용자의 특정 캘린더에 일반 일정을 생성합니다."
+    },
+    {
+        "apiName": "일반 일정 목록 가져오기",
+        "apiSite": "https://developers.kakao.com/docs/latest/ko/talkcalendar/rest-api#common-event-get-list",
+        "apiImgUrl": "https://cs.kakao.com/img/cskakaocom/pc/thumb/thumb_kakaotalk.png",
+        "category": "calendar",
+        "apiDesc": "특정 캘린더에 등록된 일정 목록을 가져옵니다."
+    },
+    {
+        "apiName": "일반 일정 상세 조회하기",
+        "apiSite": "https://developers.kakao.com/docs/latest/ko/talkcalendar/rest-api#common-event-get",
+        "apiImgUrl": "https://cs.kakao.com/img/cskakaocom/pc/thumb/thumb_kakaotalk.png",
+        "category": "calendar",
+        "apiDesc": "사용자의 일반 일정 정보를 조회합니다."
+    },
+    {
+        "apiName": "일반 일정 수정하기",
+        "apiSite": "https://developers.kakao.com/docs/latest/ko/talkcalendar/rest-api#common-event-modify",
+        "apiImgUrl": "https://cs.kakao.com/img/cskakaocom/pc/thumb/thumb_kakaotalk.png",
+        "category": "calendar",
+        "apiDesc": "사용자의 일반 일정 정보를 수정합니다."
+    },
+    {
+        "apiName": "일반 일정 삭제하기",
+        "apiSite": "https://developers.kakao.com/docs/latest/ko/talkcalendar/rest-api#common-event-delete",
+        "apiImgUrl": "https://cs.kakao.com/img/cskakaocom/pc/thumb/thumb_kakaotalk.png",
+        "category": "calendar",
+        "apiDesc": "사용자의 일반 일정을 삭제합니다."
+    },
+    {
+        "apiName": "공개 일정 생성하기",
+        "apiSite": "https://developers.kakao.com/docs/latest/ko/talkcalendar/rest-api#public-event-create",
+        "apiImgUrl": "https://cs.kakao.com/img/cskakaocom/pc/thumb/thumb_kakaotalk.png",
+        "category": "calendar",
+        "apiDesc": "카카오톡 채널의 공개 일정을 생성합니다. 앱과 연결된 카카오톡 채널의 공개 일정만 생성할 수 있습니다."
+    },
+    {
+        "apiName": "공개 일정 목록 가져오기",
+        "apiSite": "https://developers.kakao.com/docs/latest/ko/talkcalendar/rest-api#public-event-get-list",
+        "apiImgUrl": "https://cs.kakao.com/img/cskakaocom/pc/thumb/thumb_kakaotalk.png",
+        "category": "calendar",
+        "apiDesc": "카카오톡 채널의 등록된 공개 일정 목록을 가져옵니다. 앱과 연결된 카카오톡 채널의 공개 일정 목록만 가져올 수 있습니다."
+    },
+    {
+        "apiName": "공개 일정 상세 조회하기",
+        "apiSite": "https://developers.kakao.com/docs/latest/ko/talkcalendar/rest-api#public-event-get",
+        "apiImgUrl": "https://cs.kakao.com/img/cskakaocom/pc/thumb/thumb_kakaotalk.png",
+        "category": "calendar",
+        "apiDesc": "카카오톡 채널의 공개 일정 정보를 조회합니다. 앱과 연결된 카카오톡 채널의 공개 일정만 조회할 수 있습니다."
+    },
+    {
+        "apiName": "공개 일정 수정하기",
+        "apiSite": "https://developers.kakao.com/docs/latest/ko/talkcalendar/rest-api#public-event-modify",
+        "apiImgUrl": "https://cs.kakao.com/img/cskakaocom/pc/thumb/thumb_kakaotalk.png",
+        "category": "calendar",
+        "apiDesc": "카카오톡 채널의 공개 일정 정보를 수정합니다. 앱과 연결된 카카오톡 채널의 공개 일정만 수정할 수 있습니다."
+    },
+    {
+        "apiName": "공개 일정 삭제하기",
+        "apiSite": "https://developers.kakao.com/docs/latest/ko/talkcalendar/rest-api#public-event-delete",
+        "apiImgUrl": "https://cs.kakao.com/img/cskakaocom/pc/thumb/thumb_kakaotalk.png",
+        "category": "calendar",
+        "apiDesc": "카카오톡 채널의 공개 일정을 삭제합니다. 앱과 연결된 카카오톡 채널의 공개 일정만 삭제할 수 있습니다."
+    },
+    {
+        "apiName": "사용자 캘린더에 추가하기",
+        "apiSite": "https://developers.kakao.com/docs/latest/ko/talkcalendar/rest-api#public-event-add",
+        "apiImgUrl": "https://cs.kakao.com/img/cskakaocom/pc/thumb/thumb_kakaotalk.png",
+        "category": "calendar",
+        "apiDesc": "공개 일정을 사용자 캘린더에 추가합니다. 앱과 연결된 카카오톡의 공개 일정만 사용자 캘린더에 추가할 수 있습니다. 공개 일정이 변경 또는 삭제될 경우, 사용자 캘린더에 추가된 공개 일정도 변경 또는 삭제될 수 있습니다."
+    },
+    {
+        "apiName": "구독 가능 캘린더 목록 가져오기",
+        "apiSite": "https://developers.kakao.com/docs/latest/ko/talkcalendar/rest-api#subscription-get-list",
+        "apiImgUrl": "https://cs.kakao.com/img/cskakaocom/pc/thumb/thumb_kakaotalk.png",
+        "category": "calendar",
+        "apiDesc": "구독 가능 캘린더 목록을 가져옵니다."
+    },
+    {
+        "apiName": "주소 검색하기",
+        "apiSite": "https://developers.kakao.com/docs/latest/ko/local/dev-guide#address-coord",
+        "apiImgUrl": "https://cs.kakao.com/img/cskakaocom/pc/thumb/thumb_kakaotalk.png",
+        "category": "map",
+        "apiDesc": "주소를 지도 위에 정확하게 표시하기 위해 해당 주소의 좌표 정보를 제공하는 API입니다. 주소에 해당하는 지번 주소, 도로명 주소, 좌표, 우편번호, 빌딩명 등의 다양한 정보를 함께 제공합니다. 이 API는 지번 주소, 도로명 주소 모두 지원합니다."
+    },
+    {
+        "apiName": "좌표로 행정구역정보 받기",
+        "apiSite": "https://developers.kakao.com/docs/latest/ko/local/dev-guide#coord-to-district",
+        "apiImgUrl": "https://cs.kakao.com/img/cskakaocom/pc/thumb/thumb_kakaotalk.png",
+        "category": "map",
+        "apiDesc": "다양한 좌표계에 대한 좌표값을 받아 해당 좌표에 부합하는 행정동, 법정동을 얻는 API입니다. 대략적인 지역 정보를 제공하여 해당 위치에 맞는 다른 서비스(맛집, 날씨 등등)를 연계하는데 활용 가능합니다."
+    },
+    {
+        "apiName": "좌표로 주소 변환하기",
+        "apiSite": "https://developers.kakao.com/docs/latest/ko/local/dev-guide#coord-to-address",
+        "apiImgUrl": "https://cs.kakao.com/img/cskakaocom/pc/thumb/thumb_kakaotalk.png",
+        "category": "map",
+        "apiDesc": "좌표 정보의 지번 주소와 도로명 주소 정보를 반환하는 API입니다. 도로명 주소는 좌표에 따라 반환되지 않을 수 있습니다."
+    },
+    {
+        "apiName": "좌표계 변환하기",
+        "apiSite": "https://developers.kakao.com/docs/latest/ko/local/dev-guide#trans-coord",
+        "apiImgUrl": "https://cs.kakao.com/img/cskakaocom/pc/thumb/thumb_kakaotalk.png",
+        "category": "map",
+        "apiDesc": "x, y 값과 입력 및 출력 좌표계를 지정해 변환된 좌표 값을 구해, 서로 다른 좌표계간 데이터 호환이 가능하도록 합니다."
+    },
+    {
+        "apiName": "키워드로 장소 검색하기",
+        "apiSite": "https://developers.kakao.com/docs/latest/ko/local/dev-guide#search-by-keyword",
+        "apiImgUrl": "https://cs.kakao.com/img/cskakaocom/pc/thumb/thumb_kakaotalk.png",
+        "category": "map",
+        "apiDesc": "질의어에 매칭된 장소 검색 결과를 지정된 정렬 기준에 따라 제공합니다. 현재 위치 좌표, 반경 제한, 정렬 옵션, 페이징 등의 기능을 통해 원하는 결과를 요청 할 수 있습니다."
+    },
+    {
+        "apiName": "카테고리로 장소 검색하기",
+        "apiSite": "https://developers.kakao.com/docs/latest/ko/local/dev-guide#search-by-category",
+        "apiImgUrl": "https://cs.kakao.com/img/cskakaocom/pc/thumb/thumb_kakaotalk.png",
+        "category": "map",
+        "apiDesc": "미리 정의된 카테고리 코드에 해당하는 장소 검색 결과를 지정된 정렬 기준에 따라 제공합니다."
+    },
+    {
+        "apiName": "자동차 길찾기",
+        "apiSite": "https://developers.kakaomobility.com/docs/navi-api/directions/",
+        "apiImgUrl": "https://cs.kakao.com/img/cskakaocom/pc/thumb/thumb_kakaotalk.png",
+        "category": "map",
+        "apiDesc": "하나의 출발지에서 하나의 목적지까지로의 경로에 대한 상세 정보를 제공합니다. "
+    },
+    {
+        "apiName": "다중 경유지 길찾기",
+        "apiSite": "https://developers.kakaomobility.com/docs/navi-api/waypoints/",
+        "apiImgUrl": "https://cs.kakao.com/img/cskakaocom/pc/thumb/thumb_kakaotalk.png",
+        "category": "map",
+        "apiDesc": "하나의 출발지에서 여러 개의 경유지를 지나 하나의 목적지까지의 경로 상세 정보를 제공합니다. "
+    },
+    {
+        "apiName": "다중 출발지 길찾기",
+        "apiSite": "https://developers.kakaomobility.com/docs/navi-api/origins/",
+        "apiImgUrl": "https://cs.kakao.com/img/cskakaocom/pc/thumb/thumb_kakaotalk.png",
+        "category": "map",
+        "apiDesc": "한 개 이상의 출발지에서 하나의 목적지까지의 경로 요약 정보를 제공합니다."
+    },
+    {
+        "apiName": "다중 목적지 길찾기",
+        "apiSite": "https://developers.kakaomobility.com/docs/navi-api/destinations/",
+        "apiImgUrl": "https://cs.kakao.com/img/cskakaocom/pc/thumb/thumb_kakaotalk.png",
+        "category": "map",
+        "apiDesc": "하나의 출발지에서 한 개 이상의 목적지까지의 경로 요약 정보를 제공합니다."
+    },
+    {
+        "apiName": "미래 운행 정보 길찾기",
+        "apiSite": "https://developers.kakaomobility.com/docs/navi-api/future/",
+        "apiImgUrl": "https://cs.kakao.com/img/cskakaocom/pc/thumb/thumb_kakaotalk.png",
+        "category": "map",
+        "apiDesc": "미래의 어느 특정 시간을 지정하고 해당 시간을 기준으로 하나의 출발지에서 하나의 목적지까지로의 경로 정보를 제공합니다. 출발 시간은 반드시 현재 시간 이후의 시간으로 지정해야 합니다. "
+    },
+    {
+        "apiName": "장소(POI) 통합 검색",
+        "apiSite": "https://tmapapi.tmapmobility.com/main.html#webservice/docs/tmapRouteDistanceDoc",
+        "apiImgUrl": "https://i.namu.wiki/i/M2UTf6Pgpq_PJ3Q4uj7tI0lLw31VdpISgxIuXYv0JaFhIcjz9sqwg27lba5aI2D1HK13bZy_lwDBBrr-brbkwhcTjm_KMZaP4FrEkdhIdCT4VG88rZGOi2eBimDh0u9FWv7IlgmtUttzCkGzbtZvyw.svg",
+        "category": "map",
+        "apiDesc": "TMAP Location Platform을 이용하여 다양한 주변 검색을 제공합니다."
+    },
+    {
+        "apiName": "명칭(POI) 상세 정보 검색",
+        "apiSite": "https://tmapapi.tmapmobility.com/main.html#webservice/docs/tmapPoiDetail",
+        "apiImgUrl": "https://i.namu.wiki/i/M2UTf6Pgpq_PJ3Q4uj7tI0lLw31VdpISgxIuXYv0JaFhIcjz9sqwg27lba5aI2D1HK13bZy_lwDBBrr-brbkwhcTjm_KMZaP4FrEkdhIdCT4VG88rZGOi2eBimDh0u9FWv7IlgmtUttzCkGzbtZvyw.svg",
+        "category": "map",
+        "apiDesc": "TMAP Location Platform을 이용하여 다양한 주변 검색을 제공합니다."
+    },
+    {
+        "apiName": "명칭(POI) 주변 카테고리 검색",
+        "apiSite": "https://tmapapi.tmapmobility.com/main.html#webservice/docs/tmapPoiAroundSearch",
+        "apiImgUrl": "https://i.namu.wiki/i/M2UTf6Pgpq_PJ3Q4uj7tI0lLw31VdpISgxIuXYv0JaFhIcjz9sqwg27lba5aI2D1HK13bZy_lwDBBrr-brbkwhcTjm_KMZaP4FrEkdhIdCT4VG88rZGOi2eBimDh0u9FWv7IlgmtUttzCkGzbtZvyw.svg",
+        "category": "map",
+        "apiDesc": "TMAP Location Platform을 이용하여 다양한 주변 검색을 제공합니다."
+    },
+    {
+        "apiName": "읍면동/도로명조회",
+        "apiSite": "https://tmapapi.tmapmobility.com/main.html#webservice/docs/tmapPoiEMDSearch",
+        "apiImgUrl": "https://i.namu.wiki/i/M2UTf6Pgpq_PJ3Q4uj7tI0lLw31VdpISgxIuXYv0JaFhIcjz9sqwg27lba5aI2D1HK13bZy_lwDBBrr-brbkwhcTjm_KMZaP4FrEkdhIdCT4VG88rZGOi2eBimDh0u9FWv7IlgmtUttzCkGzbtZvyw.svg",
+        "category": "map",
+        "apiDesc": "TMAP Location Platform을 이용하여 다양한 주변 검색을 제공합니다."
+    },
+    {
+        "apiName": "지역분류코드검색",
+        "apiSite": "https://tmapapi.tmapmobility.com/main.html#webservice/docs/tmapPoiAreaTypeCd",
+        "apiImgUrl": "https://i.namu.wiki/i/M2UTf6Pgpq_PJ3Q4uj7tI0lLw31VdpISgxIuXYv0JaFhIcjz9sqwg27lba5aI2D1HK13bZy_lwDBBrr-brbkwhcTjm_KMZaP4FrEkdhIdCT4VG88rZGOi2eBimDh0u9FWv7IlgmtUttzCkGzbtZvyw.svg",
+        "category": "map",
+        "apiDesc": "TMAP Location Platform을 이용하여 다양한 주변 검색을 제공합니다."
+    },
+    {
+        "apiName": "명칭(POI) 경로 반경 검색",
+        "apiSite": "https://tmapapi.tmapmobility.com/main.html#webservice/docs/tmapPoiFindRoute",
+        "apiImgUrl": "https://i.namu.wiki/i/M2UTf6Pgpq_PJ3Q4uj7tI0lLw31VdpISgxIuXYv0JaFhIcjz9sqwg27lba5aI2D1HK13bZy_lwDBBrr-brbkwhcTjm_KMZaP4FrEkdhIdCT4VG88rZGOi2eBimDh0u9FWv7IlgmtUttzCkGzbtZvyw.svg",
+        "category": "map",
+        "apiDesc": "TMAP Location Platform을 이용하여 다양한 주변 검색을 제공합니다."
+    },
+    {
+        "apiName": "좌표변환",
+        "apiSite": "https://tmapapi.tmapmobility.com/main.html#webservice/docs/convertCoord",
+        "apiImgUrl": "https://i.namu.wiki/i/M2UTf6Pgpq_PJ3Q4uj7tI0lLw31VdpISgxIuXYv0JaFhIcjz9sqwg27lba5aI2D1HK13bZy_lwDBBrr-brbkwhcTjm_KMZaP4FrEkdhIdCT4VG88rZGOi2eBimDh0u9FWv7IlgmtUttzCkGzbtZvyw.svg",
+        "category": "map",
+        "apiDesc": "주소좌표 또는 위치좌표를 양방향으로 전환하여 지도 정보를 활용하도록 도와주는 API입니다."
+    },
+    {
+        "apiName": "주소변환",
+        "apiSite": "https://tmapapi.tmapmobility.com/main.html#webservice/docs/convertAddress",
+        "apiImgUrl": "https://i.namu.wiki/i/M2UTf6Pgpq_PJ3Q4uj7tI0lLw31VdpISgxIuXYv0JaFhIcjz9sqwg27lba5aI2D1HK13bZy_lwDBBrr-brbkwhcTjm_KMZaP4FrEkdhIdCT4VG88rZGOi2eBimDh0u9FWv7IlgmtUttzCkGzbtZvyw.svg",
+        "category": "map",
+        "apiDesc": "주소좌표 또는 위치좌표를 양방향으로 전환하여 지도 정보를 활용하도록 도와주는 API입니다."
+    },
+    {
+        "apiName": "가까운도로찾기",
+        "apiSite": "https://tmapapi.tmapmobility.com/main.html#webservice/docs/nearToRoad",
+        "apiImgUrl": "https://i.namu.wiki/i/M2UTf6Pgpq_PJ3Q4uj7tI0lLw31VdpISgxIuXYv0JaFhIcjz9sqwg27lba5aI2D1HK13bZy_lwDBBrr-brbkwhcTjm_KMZaP4FrEkdhIdCT4VG88rZGOi2eBimDh0u9FWv7IlgmtUttzCkGzbtZvyw.svg",
+        "category": "map",
+        "apiDesc": "주소좌표 또는 위치좌표를 양방향으로 전환하여 지도 정보를 활용하도록 도와주는 API입니다."
+    },
+    {
+        "apiName": "우편번호 검색",
+        "apiSite": "https://tmapapi.tmapmobility.com/main.html#webservice/docs/postCode",
+        "apiImgUrl": "https://i.namu.wiki/i/M2UTf6Pgpq_PJ3Q4uj7tI0lLw31VdpISgxIuXYv0JaFhIcjz9sqwg27lba5aI2D1HK13bZy_lwDBBrr-brbkwhcTjm_KMZaP4FrEkdhIdCT4VG88rZGOi2eBimDh0u9FWv7IlgmtUttzCkGzbtZvyw.svg",
+        "category": "map",
+        "apiDesc": "주소좌표 또는 위치좌표를 양방향으로 전환하여 지도 정보를 활용하도록 도와주는 API입니다."
+    },
+    {
+        "apiName": "Reverse Label",
+        "apiSite": "https://tmapapi.tmapmobility.com/main.html#webservice/docs/reverseLabel",
+        "apiImgUrl": "https://i.namu.wiki/i/M2UTf6Pgpq_PJ3Q4uj7tI0lLw31VdpISgxIuXYv0JaFhIcjz9sqwg27lba5aI2D1HK13bZy_lwDBBrr-brbkwhcTjm_KMZaP4FrEkdhIdCT4VG88rZGOi2eBimDh0u9FWv7IlgmtUttzCkGzbtZvyw.svg",
+        "category": "map",
+        "apiDesc": "주소좌표 또는 위치좌표를 양방향으로 전환하여 지도 정보를 활용하도록 도와주는 API입니다."
+    },
+    {
+        "apiName": "공간검색 API",
+        "apiSite": "https://tmapapi.tmapmobility.com/main.html#webservice/docs/tmapGeofencingRegionsDoc",
+        "apiImgUrl": "https://i.namu.wiki/i/M2UTf6Pgpq_PJ3Q4uj7tI0lLw31VdpISgxIuXYv0JaFhIcjz9sqwg27lba5aI2D1HK13bZy_lwDBBrr-brbkwhcTjm_KMZaP4FrEkdhIdCT4VG88rZGOi2eBimDh0u9FWv7IlgmtUttzCkGzbtZvyw.svg",
+        "category": "map",
+        "apiDesc": "조회하고자 하는 공간을 검색하며 해당 영역의 영역정보를 조회 할 수 있는 API 를 제공합니다."
+    },
+    {
+        "apiName": "영역조회 API",
+        "apiSite": "https://tmapapi.tmapmobility.com/main.html#webservice/docs/tmapGeofencingRegionsDetailDoc",
+        "apiImgUrl": "https://i.namu.wiki/i/M2UTf6Pgpq_PJ3Q4uj7tI0lLw31VdpISgxIuXYv0JaFhIcjz9sqwg27lba5aI2D1HK13bZy_lwDBBrr-brbkwhcTjm_KMZaP4FrEkdhIdCT4VG88rZGOi2eBimDh0u9FWv7IlgmtUttzCkGzbtZvyw.svg",
+        "category": "map",
+        "apiDesc": "조회하고자 하는 공간을 검색하며 해당 영역의 영역정보를 조회 할 수 있는 API 를 제공합니다."
+    },
+    {
+        "apiName": "교통정보",
+        "apiSite": "https://tmapapi.tmapmobility.com/main.html#webservice/docs/tmapTrafficDoc",
+        "apiImgUrl": "https://i.namu.wiki/i/M2UTf6Pgpq_PJ3Q4uj7tI0lLw31VdpISgxIuXYv0JaFhIcjz9sqwg27lba5aI2D1HK13bZy_lwDBBrr-brbkwhcTjm_KMZaP4FrEkdhIdCT4VG88rZGOi2eBimDh0u9FWv7IlgmtUttzCkGzbtZvyw.svg",
+        "category": "map",
+        "apiDesc": "TMAP의 교통정보 API를 통해 각종 교통 상황 정보를 조회하여 가져옵니다. 다양한 교통상황 정보를 제공 할 수 있습니다."
+    },
+    {
+        "apiName": "타임머신 자동차 길 안내",
+        "apiSite": "https://tmapapi.tmapmobility.com/main.html#webservice/docs/tmapRoutePredictionDoc",
+        "apiImgUrl": "https://i.namu.wiki/i/M2UTf6Pgpq_PJ3Q4uj7tI0lLw31VdpISgxIuXYv0JaFhIcjz9sqwg27lba5aI2D1HK13bZy_lwDBBrr-brbkwhcTjm_KMZaP4FrEkdhIdCT4VG88rZGOi2eBimDh0u9FWv7IlgmtUttzCkGzbtZvyw.svg",
+        "category": "map",
+        "apiDesc": "이동수단에 따른 경로 탐색 서비스를 제공할 수 있습니다. 자동차, 보행자 경로 안내 API를 제공합니다."
+    },
+    {
+        "apiName": "보행자 경로안내",
+        "apiSite": "https://tmapapi.tmapmobility.com/main.html#webservice/docs/tmapRoutePedestrianDoc",
+        "apiImgUrl": "https://i.namu.wiki/i/M2UTf6Pgpq_PJ3Q4uj7tI0lLw31VdpISgxIuXYv0JaFhIcjz9sqwg27lba5aI2D1HK13bZy_lwDBBrr-brbkwhcTjm_KMZaP4FrEkdhIdCT4VG88rZGOi2eBimDh0u9FWv7IlgmtUttzCkGzbtZvyw.svg",
+        "category": "map",
+        "apiDesc": "이동수단에 따른 경로 탐색 서비스를 제공할 수 있습니다. 자동차, 보행자 경로 안내 API를 제공합니다."
+    },
+    {
+        "apiName": "자동차 경로안내",
+        "apiSite": "https://tmapapi.tmapmobility.com/main.html#webservice/docs/tmapRouteDoc",
+        "apiImgUrl": "https://i.namu.wiki/i/M2UTf6Pgpq_PJ3Q4uj7tI0lLw31VdpISgxIuXYv0JaFhIcjz9sqwg27lba5aI2D1HK13bZy_lwDBBrr-brbkwhcTjm_KMZaP4FrEkdhIdCT4VG88rZGOi2eBimDh0u9FWv7IlgmtUttzCkGzbtZvyw.svg",
+        "category": "map",
+        "apiDesc": "이동수단에 따른 경로 탐색 서비스를 제공할 수 있습니다. 자동차, 보행자 경로 안내 API를 제공합니다."
+    },
+    {
+        "apiName": "경로 이미지 안내",
+        "apiSite": "https://tmapapi.tmapmobility.com/main.html#webservice/docs/RouteStaticMapDoc",
+        "apiImgUrl": "https://i.namu.wiki/i/M2UTf6Pgpq_PJ3Q4uj7tI0lLw31VdpISgxIuXYv0JaFhIcjz9sqwg27lba5aI2D1HK13bZy_lwDBBrr-brbkwhcTjm_KMZaP4FrEkdhIdCT4VG88rZGOi2eBimDh0u9FWv7IlgmtUttzCkGzbtZvyw.svg",
+        "category": "map",
+        "apiDesc": "이동수단에 따른 경로 탐색 서비스를 제공할 수 있습니다. 자동차, 보행자 경로 안내 API를 제공합니다."
+    },
+    {
+        "apiName": "화물차 경로안내",
+        "apiSite": "https://tmapapi.tmapmobility.com/main.html#webservice/docs/tmapTruckRouteDoc",
+        "apiImgUrl": "https://i.namu.wiki/i/M2UTf6Pgpq_PJ3Q4uj7tI0lLw31VdpISgxIuXYv0JaFhIcjz9sqwg27lba5aI2D1HK13bZy_lwDBBrr-brbkwhcTjm_KMZaP4FrEkdhIdCT4VG88rZGOi2eBimDh0u9FWv7IlgmtUttzCkGzbtZvyw.svg",
+        "category": "map",
+        "apiDesc": "이동수단에 따른 경로 탐색 서비스를 제공할 수 있습니다. 자동차, 보행자 경로 안내 API를 제공합니다."
+    },
+    {
+        "apiName": "다중 경유지 안내",
+        "apiSite": "https://tmapapi.tmapmobility.com/main.html#webservice/docs/tmapRouteSequential30",
+        "apiImgUrl": "https://i.namu.wiki/i/M2UTf6Pgpq_PJ3Q4uj7tI0lLw31VdpISgxIuXYv0JaFhIcjz9sqwg27lba5aI2D1HK13bZy_lwDBBrr-brbkwhcTjm_KMZaP4FrEkdhIdCT4VG88rZGOi2eBimDh0u9FWv7IlgmtUttzCkGzbtZvyw.svg",
+        "category": "map",
+        "apiDesc": "자동차 경로안내에서 제공하지 못하는 경유지의 갯수를 30개에서 최대 100개까지 설정하여 경로 탐색을 합니다."
+    },
+    {
+        "apiName": "경유지 순서 최적화",
+        "apiSite": "https://tmapapi.tmapmobility.com/main.html#webservice/docs/tmapRouteOptimization10Doc",
+        "apiImgUrl": "https://i.namu.wiki/i/M2UTf6Pgpq_PJ3Q4uj7tI0lLw31VdpISgxIuXYv0JaFhIcjz9sqwg27lba5aI2D1HK13bZy_lwDBBrr-brbkwhcTjm_KMZaP4FrEkdhIdCT4VG88rZGOi2eBimDh0u9FWv7IlgmtUttzCkGzbtZvyw.svg",
+        "category": "map",
+        "apiDesc": "최적화된 경유지를 찾아 줍니다, 효율적인 배송을 위해 사용 가능 합니다. 경유지 최적화 서비스는 별도 계약을 통해서만 사용 가능 합니다."
+    },
+    {
+        "apiName": "이동한도로찾기",
+        "apiSite": "https://tmapapi.tmapmobility.com/main.html#webservice/docs/roadApi",
+        "apiImgUrl": "https://i.namu.wiki/i/M2UTf6Pgpq_PJ3Q4uj7tI0lLw31VdpISgxIuXYv0JaFhIcjz9sqwg27lba5aI2D1HK13bZy_lwDBBrr-brbkwhcTjm_KMZaP4FrEkdhIdCT4VG88rZGOi2eBimDh0u9FWv7IlgmtUttzCkGzbtZvyw.svg",
+        "category": "map",
+        "apiDesc": "좌표의 목록을 가지고 이동한 도로의 정보를 제공해주는 API를 제공합니다."
+    },
+    {
+        "apiName": "StaticMap",
+        "apiSite": "https://tmapapi.tmapmobility.com/main.html#webservice/docs/staticMap",
+        "apiImgUrl": "https://i.namu.wiki/i/M2UTf6Pgpq_PJ3Q4uj7tI0lLw31VdpISgxIuXYv0JaFhIcjz9sqwg27lba5aI2D1HK13bZy_lwDBBrr-brbkwhcTjm_KMZaP4FrEkdhIdCT4VG88rZGOi2eBimDh0u9FWv7IlgmtUttzCkGzbtZvyw.svg",
+        "category": "map",
+        "apiDesc": "TMAP의 StaticMap API를 통해 좌표를 통하여 좌표를 중심으로 한 지도 이미지를 제공합니다."
+    },
+    {
+        "apiName": "경로 매트릭스",
+        "apiSite": "https://tmapapi.tmapmobility.com/main.html#webservice/docs/tmapMatrixDoc",
+        "apiImgUrl": "https://i.namu.wiki/i/M2UTf6Pgpq_PJ3Q4uj7tI0lLw31VdpISgxIuXYv0JaFhIcjz9sqwg27lba5aI2D1HK13bZy_lwDBBrr-brbkwhcTjm_KMZaP4FrEkdhIdCT4VG88rZGOi2eBimDh0u9FWv7IlgmtUttzCkGzbtZvyw.svg",
+        "category": "map",
+        "apiDesc": "TMAP의 경로 매트릭스 API를 사용하여 여러 출발지와 목적지에 대한 경로탐색 결과를 제공합니다."
+    },
+    {
+        "apiName": "실시간 장소 혼잡도",
+        "apiSite": "https://tmapapi.tmapmobility.com/main.html#puzzle/docs/puzzlePoi",
+        "apiImgUrl": "https://i.namu.wiki/i/M2UTf6Pgpq_PJ3Q4uj7tI0lLw31VdpISgxIuXYv0JaFhIcjz9sqwg27lba5aI2D1HK13bZy_lwDBBrr-brbkwhcTjm_KMZaP4FrEkdhIdCT4VG88rZGOi2eBimDh0u9FWv7IlgmtUttzCkGzbtZvyw.svg",
+        "category": "map",
+        "apiDesc": "특정 실시간 장소 혼잡도와 주변 혼잡도를 제공합니다."
+    },
+    {
+        "apiName": "환율정보조회",
+        "apiSite": "https://hanafnapimarket.com/#/apis/guide?apiId=hbk00004",
+        "apiImgUrl": "https://lh4.googleusercontent.com/proxy/iLv1WgYKyv0UJkx6A8Cr7WAXXXwDc72vL_xaAVp3UkdlEE3cblgFLNuk667ju0SvyOMqQPmAU3IK8q6voDX_Y8fXhywNHx5SzQ9oWJkd3oPpRoJZ_uKfwcGUDKB0zR33",
+        "category": "bank",
+        "apiDesc": "하나은행 실시간 외화 고시환율 데이터를 전송받기 위한 REST API"
+    },
+    {
+        "apiName": "B2B계좌정보조회",
+        "apiSite": "https://hanafnapimarket.com/#/apis/guide?apiId=hbk00008",
+        "apiImgUrl": "https://lh4.googleusercontent.com/proxy/iLv1WgYKyv0UJkx6A8Cr7WAXXXwDc72vL_xaAVp3UkdlEE3cblgFLNuk667ju0SvyOMqQPmAU3IK8q6voDX_Y8fXhywNHx5SzQ9oWJkd3oPpRoJZ_uKfwcGUDKB0zR33",
+        "category": "bank",
+        "apiDesc": "하나은행 환전지갑 서비스를 연동하기 위한 REST API"
+    },
+    {
+        "apiName": "환전지갑",
+        "apiSite": "https://hanafnapimarket.com/#/apis/guide?apiId=hbk00005",
+        "apiImgUrl": "https://lh4.googleusercontent.com/proxy/iLv1WgYKyv0UJkx6A8Cr7WAXXXwDc72vL_xaAVp3UkdlEE3cblgFLNuk667ju0SvyOMqQPmAU3IK8q6voDX_Y8fXhywNHx5SzQ9oWJkd3oPpRoJZ_uKfwcGUDKB0zR33",
+        "category": "bank",
+        "apiDesc": "하나은행 환전지갑 서비스를 연동하기 위한 REST API"
+    },
+    {
+        "apiName": "1원인증",
+        "apiSite": "https://hanafnapimarket.com/#/apis/guide?apiId=hbk00007",
+        "apiImgUrl": "https://lh4.googleusercontent.com/proxy/iLv1WgYKyv0UJkx6A8Cr7WAXXXwDc72vL_xaAVp3UkdlEE3cblgFLNuk667ju0SvyOMqQPmAU3IK8q6voDX_Y8fXhywNHx5SzQ9oWJkd3oPpRoJZ_uKfwcGUDKB0zR33",
+        "category": "bank",
+        "apiDesc": "고객 계좌로 1원과 인증번호를 전송하여, 계좌 본인여부를 확인하는 REST API"
+    },
+    {
+        "apiName": "비대면계좌개설내역 조회",
+        "apiSite": "https://hanafnapimarket.com/#/apis/guide?apiId=hbk00011",
+        "apiImgUrl": "https://lh4.googleusercontent.com/proxy/iLv1WgYKyv0UJkx6A8Cr7WAXXXwDc72vL_xaAVp3UkdlEE3cblgFLNuk667ju0SvyOMqQPmAU3IK8q6voDX_Y8fXhywNHx5SzQ9oWJkd3oPpRoJZ_uKfwcGUDKB0zR33",
+        "category": "bank",
+        "apiDesc": "이용기관 연계 하나은행 전용 비대면계좌개설(URL,배너) 서비스를 통해 비대면으로 개설된 계좌 내역을 조회하는 REST API"
+    },
+    {
+        "apiName": "1Q 오토론",
+        "apiSite": "https://hanafnapimarket.com/#/apis/guide?apiId=hbk00001",
+        "apiImgUrl": "https://lh4.googleusercontent.com/proxy/iLv1WgYKyv0UJkx6A8Cr7WAXXXwDc72vL_xaAVp3UkdlEE3cblgFLNuk667ju0SvyOMqQPmAU3IK8q6voDX_Y8fXhywNHx5SzQ9oWJkd3oPpRoJZ_uKfwcGUDKB0zR33",
+        "category": "bank",
+        "apiDesc": "하나은행 1Q오토론 한도조회 서비스를 연계하기 위한 REST API"
+    },
+    {
+        "apiName": "대량이체 등록",
+        "apiSite": "https://hanafnapimarket.com/#/apis/guide?apiId=hbk00010",
+        "apiImgUrl": "https://lh4.googleusercontent.com/proxy/iLv1WgYKyv0UJkx6A8Cr7WAXXXwDc72vL_xaAVp3UkdlEE3cblgFLNuk667ju0SvyOMqQPmAU3IK8q6voDX_Y8fXhywNHx5SzQ9oWJkd3oPpRoJZ_uKfwcGUDKB0zR33",
+        "category": "bank",
+        "apiDesc": "하나은행 기업뱅킹시스템과 연계하여 급여(대량)이체 내역을 등록하는 REST API"
+    },
+    {
+        "apiName": "영업점 정보조회",
+        "apiSite": "https://hanafnapimarket.com/#/apis/guide?apiId=hbk00003",
+        "apiImgUrl": "https://lh4.googleusercontent.com/proxy/iLv1WgYKyv0UJkx6A8Cr7WAXXXwDc72vL_xaAVp3UkdlEE3cblgFLNuk667ju0SvyOMqQPmAU3IK8q6voDX_Y8fXhywNHx5SzQ9oWJkd3oPpRoJZ_uKfwcGUDKB0zR33",
+        "category": "bank",
+        "apiDesc": "하나은행 영업점/ATM 위치정보와 고객대기 현황 데이터를 제공합니다."
+    },
+    {
+        "apiName": "세금계산서 API",
+        "apiSite": "https://dev.barobill.co.kr/docs/references/%EC%84%B8%EA%B8%88%EA%B3%84%EC%82%B0%EC%84%9C-API",
+        "apiImgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCYinOOQeBemyFJrm1sH_PFI0oa6ItCntINg&s",
+        "category": "bank",
+        "apiDesc": "바로빌에서 제공하는 전자세금계산서 API를 사용하는데 필요한 규격 및 가이드를 제공합니다."
+    },
+    {
+        "apiName": "현금영수증 API",
+        "apiSite": "https://dev.barobill.co.kr/docs/references/%ED%98%84%EA%B8%88%EC%98%81%EC%88%98%EC%A6%9D-API",
+        "apiImgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCYinOOQeBemyFJrm1sH_PFI0oa6ItCntINg&s",
+        "category": "bank",
+        "apiDesc": "바로빌에서 제공하는 현금영수증 API를 사용하는데 필요한 규격 및 가이드를 제공합니다."
+    },
+    {
+        "apiName": "전자문서 API",
+        "apiSite": "https://dev.barobill.co.kr/docs/references/%EC%A0%84%EC%9E%90%EB%AC%B8%EC%84%9C-API",
+        "apiImgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCYinOOQeBemyFJrm1sH_PFI0oa6ItCntINg&s",
+        "category": "bank",
+        "apiDesc": "바로빌에서 제공하는 전자문서 API를 사용하는데 필요한 규격 및 가이드를 제공합니다."
+    },
+    {
+        "apiName": "홈택스 매입매출조회 API",
+        "apiSite": "https://dev.barobill.co.kr/docs/references/%ED%99%88%ED%83%9D%EC%8A%A4-%EB%A7%A4%EC%9E%85%EB%A7%A4%EC%B6%9C%EC%A1%B0%ED%9A%8C-API",
+        "apiImgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCYinOOQeBemyFJrm1sH_PFI0oa6ItCntINg&s",
+        "category": "bank",
+        "apiDesc": "바로빌에서 제공하는 홈택스 매입매출조회 API를 사용하는데 필요한 규격 및 가이드를 제공합니다."
+    },
+    {
+        "apiName": "사업자등록 상태조회 API",
+        "apiSite": "https://dev.barobill.co.kr/docs/references/%EC%82%AC%EC%97%85%EC%9E%90%EB%93%B1%EB%A1%9D-%EC%83%81%ED%83%9C%EC%A1%B0%ED%9A%8C-API",
+        "apiImgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCYinOOQeBemyFJrm1sH_PFI0oa6ItCntINg&s",
+        "category": "bank",
+        "apiDesc": "바로빌에서 제공하는 사업자등록 상태조회 API를 사용하는데 필요한 규격 및 가이드를 제공합니다."
+    },
+    {
+        "apiName": "카드조회 API",
+        "apiSite": "https://dev.barobill.co.kr/docs/references/%EC%B9%B4%EB%93%9C%EC%A1%B0%ED%9A%8C-API",
+        "apiImgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCYinOOQeBemyFJrm1sH_PFI0oa6ItCntINg&s",
+        "category": "bank",
+        "apiDesc": "바로빌에서 제공하는 카드조회 API를 사용하는데 필요한 규격 및 가이드를 제공합니다."
+    },
+    {
+        "apiName": "계좌조회 API",
+        "apiSite": "https://dev.barobill.co.kr/docs/references/%EA%B3%84%EC%A2%8C%EC%A1%B0%ED%9A%8C-API",
+        "apiImgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCYinOOQeBemyFJrm1sH_PFI0oa6ItCntINg&s",
+        "category": "bank",
+        "apiDesc": "바로빌에서 제공하는 계좌조회 API를 사용하는데 필요한 규격 및 가이드를 제공합니다."
+    },
+    {
+        "apiName": "문자전송 API",
+        "apiSite": "https://dev.barobill.co.kr/docs/references/%EB%AC%B8%EC%9E%90%EC%A0%84%EC%86%A1-API",
+        "apiImgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCYinOOQeBemyFJrm1sH_PFI0oa6ItCntINg&s",
+        "category": "bank",
+        "apiDesc": "바로빌에서 제공하는 문자전송 API를 사용하는데 필요한 규격 및 가이드를 제공합니다."
+    },
+    {
+        "apiName": "카카오톡전송 API",
+        "apiSite": "https://dev.barobill.co.kr/docs/references/%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%86%A1%EC%A0%84%EC%86%A1-API",
+        "apiImgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCYinOOQeBemyFJrm1sH_PFI0oa6ItCntINg&s",
+        "category": "bank",
+        "apiDesc": "바로빌에서 제공하는 카카오톡전송 API를 사용하는데 필요한 규격 및 가이드를 제공합니다."
+    },
+    {
+        "apiName": "팩스전송 API",
+        "apiSite": "https://dev.barobill.co.kr/docs/references/%ED%8C%A9%EC%8A%A4%EC%A0%84%EC%86%A1-API",
+        "apiImgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCYinOOQeBemyFJrm1sH_PFI0oa6ItCntINg&s",
+        "category": "bank",
+        "apiDesc": "바로빌에서 제공하는 팩스전송 API를 사용하는데 필요한 규격 및 가이드를 제공합니다."
+    },
+    {
+        "apiName": "핀-어카운트 직접발급",
+        "apiSite": "https://developers.nonghyup.com/guide/GU_1010",
+        "apiImgUrl": "https://cdn.ulsanpress.net/news/photo/202402/521942_221466_1852.png",
+        "category": "bank",
+        "apiDesc": "핀테크기업이 고객으로부터 직접 접수한 농협계좌에 대해 핀-어카운트 발급을 요청합니다."
+    },
+    {
+        "apiName": "핀-어카운트 직접발급확인",
+        "apiSite": "https://developers.nonghyup.com/guide/GU_1020",
+        "apiImgUrl": "https://cdn.ulsanpress.net/news/photo/202402/521942_221466_1852.png",
+        "category": "bank",
+        "apiDesc": "핀-어카운트 직접발급을 확인합니다."
+    },
+    {
+        "apiName": "핀-카드 직접발급",
+        "apiSite": "https://developers.nonghyup.com/guide/GU_1030",
+        "apiImgUrl": "https://cdn.ulsanpress.net/news/photo/202402/521942_221466_1852.png",
+        "category": "bank",
+        "apiDesc": " 핀테크기업이 고객으로부터 직접 접수한 농협 개인카드에 대해 핀-카드 발급을 요청합니다."
+    },
+    {
+        "apiName": "핀-카드 직접발급확인",
+        "apiSite": "https://developers.nonghyup.com/guide/GU_1040",
+        "apiImgUrl": "https://cdn.ulsanpress.net/news/photo/202402/521942_221466_1852.png",
+        "category": "bank",
+        "apiDesc": "핀-카드를 직접 발급을 확인합니다."
+    },
+    {
+        "apiName": "예금주조회",
+        "apiSite": "https://developers.nonghyup.com/guide/GU_3010",
+        "apiImgUrl": "https://cdn.ulsanpress.net/news/photo/202402/521942_221466_1852.png",
+        "category": "bank",
+        "apiDesc": "당행 계좌에 대한 예금주명을 조회합니다."
+    },
+    {
+        "apiName": "타행예금주조회",
+        "apiSite": "https://developers.nonghyup.com/guide/GU_3020",
+        "apiImgUrl": "https://cdn.ulsanpress.net/news/photo/202402/521942_221466_1852.png",
+        "category": "bank",
+        "apiDesc": "타행 계좌에 대한 예금주명을 조회합니다."
+    },
+    {
+        "apiName": "잔액조회",
+        "apiSite": "https://developers.nonghyup.com/guide/GU_2030",
+        "apiImgUrl": "https://cdn.ulsanpress.net/news/photo/202402/521942_221466_1852.png",
+        "category": "bank",
+        "apiDesc": "핀-어카운트 연결계좌에 대한 잔액을 조회합니다."
+    },
+    {
+        "apiName": "개인카드 승인내역조회",
+        "apiSite": "https://developers.nonghyup.com/guide/GU_2040",
+        "apiImgUrl": "https://cdn.ulsanpress.net/news/photo/202402/521942_221466_1852.png",
+        "category": "bank",
+        "apiDesc": " 핀-카드에 연결된 개인카드의 승인내역을 조회합니다."
+    },
+    {
+        "apiName": "자기앞수표조회",
+        "apiSite": "https://developers.nonghyup.com/guide/GU_2060",
+        "apiImgUrl": "https://cdn.ulsanpress.net/news/photo/202402/521942_221466_1852.png",
+        "category": "bank",
+        "apiDesc": "자기앞수표의 상태를 조회합니다."
+    },
+    {
+        "apiName": "환율조회",
+        "apiSite": "https://developers.nonghyup.com/guide/GU_2070",
+        "apiImgUrl": "https://cdn.ulsanpress.net/news/photo/202402/521942_221466_1852.png",
+        "category": "bank",
+        "apiDesc": "환율을 조회합니다."
+    },
+    {
+        "apiName": "출금이체",
+        "apiSite": "https://developers.nonghyup.com/guide/GU_3030",
+        "apiImgUrl": "https://cdn.ulsanpress.net/news/photo/202402/521942_221466_1852.png",
+        "category": "bank",
+        "apiDesc": "고객계좌에서 핀테크 기업 약정계좌로 핀-어카운트를 이용하여 출금합니다."
+    },
+    {
+        "apiName": "농협입금이체",
+        "apiSite": "https://developers.nonghyup.com/guide/GU_3040",
+        "apiImgUrl": "https://cdn.ulsanpress.net/news/photo/202402/521942_221466_1852.png",
+        "category": "bank",
+        "apiDesc": "핀테크기업 약정계좌에서 고객 농협계좌로 입금합니다."
+    },
+    {
+        "apiName": "타행입금이체",
+        "apiSite": "https://developers.nonghyup.com/guide/GU_3050",
+        "apiImgUrl": "https://cdn.ulsanpress.net/news/photo/202402/521942_221466_1852.png",
+        "category": "bank",
+        "apiDesc": "핀테크기업 약정계좌에서 고객 타행계좌로 입금합니다."
+    },
+    {
+        "apiName": "거래내역조회",
+        "apiSite": "https://developers.nonghyup.com/guide/GU_3060",
+        "apiImgUrl": "https://cdn.ulsanpress.net/news/photo/202402/521942_221466_1852.png",
+        "category": "bank",
+        "apiDesc": "해당계좌의 거래내역을 조회합니다."
+    },
+    {
+        "apiName": "투자금관리용 가상계좌발급",
+        "apiSite": "https://developers.nonghyup.com/guide/GU_4010",
+        "apiImgUrl": "https://cdn.ulsanpress.net/news/photo/202402/521942_221466_1852.png",
+        "category": "bank",
+        "apiDesc": "P2P 투자금 관리용 가상계좌를 발급합니다."
+    },
+    {
+        "apiName": "입금확인 목록조회",
+        "apiSite": "https://developers.nonghyup.com/guide/GU_4011",
+        "apiImgUrl": "https://cdn.ulsanpress.net/news/photo/202402/521942_221466_1852.png",
+        "category": "bank",
+        "apiDesc": "입력한 기간의 가상계좌 예치 내역 및 현재 사용가능 예치금과 당일 입금된 예치금을 조회합니다."
+    },
+    {
+        "apiName": "투자금 지급지시",
+        "apiSite": "https://developers.nonghyup.com/guide/GU_4020",
+        "apiImgUrl": "https://cdn.ulsanpress.net/news/photo/202402/521942_221466_1852.png",
+        "category": "bank",
+        "apiDesc": "투자금 모집 완료 후 차입자에게 대출을 시행합니다."
+    },
+    {
+        "apiName": "투자금지급결과조회",
+        "apiSite": "https://developers.nonghyup.com/guide/GU_4021",
+        "apiImgUrl": "https://cdn.ulsanpress.net/news/photo/202402/521942_221466_1852.png",
+        "category": "bank",
+        "apiDesc": "투자금 지급에 대한 처리결과를 확인합니다."
+    },
+    {
+        "apiName": "원리금상환",
+        "apiSite": "https://developers.nonghyup.com/guide/GU_4030",
+        "apiImgUrl": "https://cdn.ulsanpress.net/news/photo/202402/521942_221466_1852.png",
+        "category": "bank",
+        "apiDesc": "차입자 원리금 상환 시 상환금을 예치 계좌로 입금합니다."
+    },
+    {
+        "apiName": "투자원리금 입금결과조회",
+        "apiSite": "https://developers.nonghyup.com/guide/GU_4031",
+        "apiImgUrl": "https://cdn.ulsanpress.net/news/photo/202402/521942_221466_1852.png",
+        "category": "bank",
+        "apiDesc": "원리금 상환에 대한 처리결과를 확인합니다."
+    },
+    {
+        "apiName": "투자예치금 반환요청",
+        "apiSite": "https://developers.nonghyup.com/guide/GU_4040",
+        "apiImgUrl": "https://cdn.ulsanpress.net/news/photo/202402/521942_221466_1852.png",
+        "category": "bank",
+        "apiDesc": "투자자가 예치한 금액을 반환합니다."
+    },
+    {
+        "apiName": "투자금예치금 반환결과조회",
+        "apiSite": "https://developers.nonghyup.com/guide/GU_4041",
+        "apiImgUrl": "https://cdn.ulsanpress.net/news/photo/202402/521942_221466_1852.png",
+        "category": "bank",
+        "apiDesc": "투자예치금 반환 결과를 조회합니다."
+    },
+    {
+        "apiName": "예치금관리용 가상계좌발급",
+        "apiSite": "https://developers.nonghyup.com/guide/GU_6010",
+        "apiImgUrl": "https://cdn.ulsanpress.net/news/photo/202402/521942_221466_1852.png",
+        "category": "bank",
+        "apiDesc": "핀테크기업이 고객에게 부여하기 위해 가상계좌 발급을 요청한다."
+    },
+    {
+        "apiName": "가상계좌 입금내역 조회",
+        "apiSite": "https://developers.nonghyup.com/guide/GU_6011",
+        "apiImgUrl": "https://cdn.ulsanpress.net/news/photo/202402/521942_221466_1852.png",
+        "category": "bank",
+        "apiDesc": "가상계좌의 입금내역을 조회한다."
+    },
+    {
+        "apiName": "결제대금 지급계좌 이체요청",
+        "apiSite": "https://developers.nonghyup.com/guide/GU_6020",
+        "apiImgUrl": "https://cdn.ulsanpress.net/news/photo/202402/521942_221466_1852.png",
+        "category": "bank",
+        "apiDesc": "결제대금 지급을 위해 농협 예치계좌에서 기관 약정계좌로 입금한다."
+    },
+    {
+        "apiName": "결제대금 지급계좌 이체요청 결과확인",
+        "apiSite": "https://developers.nonghyup.com/guide/GU_6021",
+        "apiImgUrl": "https://cdn.ulsanpress.net/news/photo/202402/521942_221466_1852.png",
+        "category": "bank",
+        "apiDesc": "결제대금 지급계좌 이체요청에 대한 결과를 확인한다."
+    },
+    {
+        "apiName": "결제대금 지급요청",
+        "apiSite": "https://developers.nonghyup.com/guide/GU_6030",
+        "apiImgUrl": "https://cdn.ulsanpress.net/news/photo/202402/521942_221466_1852.png",
+        "category": "bank",
+        "apiDesc": "결제대금 지급을 위해 기관 약정계좌에서 고객 계좌로 이체한다."
+    },
+    {
+        "apiName": "결제대금 지급요청 결과확인",
+        "apiSite": "https://developers.nonghyup.com/guide/GU_6031",
+        "apiImgUrl": "https://cdn.ulsanpress.net/news/photo/202402/521942_221466_1852.png",
+        "category": "bank",
+        "apiDesc": "결제대금 지급요청에 대한 결과를 확인한다."
+    },
+    {
+        "apiName": "예치금 잔액조회",
+        "apiSite": "https://developers.nonghyup.com/guide/GU_6040",
+        "apiImgUrl": "https://cdn.ulsanpress.net/news/photo/202402/521942_221466_1852.png",
+        "category": "bank",
+        "apiDesc": "농협 예치계좌의 예치금 잔액을 조회한다."
+    },
+    {
+        "apiName": "상하수도요금납부 선조회",
+        "apiSite": "https://developers.nonghyup.com/guide/GU_5010",
+        "apiImgUrl": "https://cdn.ulsanpress.net/news/photo/202402/521942_221466_1852.png",
+        "category": "bank",
+        "apiDesc": " 상하수도요금 납부 정보를 조회합니다."
+    },
+    {
+        "apiName": "상하수도요금납부",
+        "apiSite": "https://developers.nonghyup.com/guide/GU_5020",
+        "apiImgUrl": "https://cdn.ulsanpress.net/news/photo/202402/521942_221466_1852.png",
+        "category": "bank",
+        "apiDesc": "조회한 납부 정보로 상하수도요금을 납부합니다."
+    },
+    {
+        "apiName": "상하수도요금 납부내역조회",
+        "apiSite": "https://developers.nonghyup.com/guide/GU_5030",
+        "apiImgUrl": "https://cdn.ulsanpress.net/news/photo/202402/521942_221466_1852.png",
+        "category": "bank",
+        "apiDesc": "상하수도요금 납부 정보를 조회합니다."
+    },
+    {
+        "apiName": "전기요금납부 선조회",
+        "apiSite": "https://developers.nonghyup.com/guide/GU_5040",
+        "apiImgUrl": "https://cdn.ulsanpress.net/news/photo/202402/521942_221466_1852.png",
+        "category": "bank",
+        "apiDesc": "전기요금 납부 정보를 조회합니다."
+    },
+    {
+        "apiName": "전기요금납부",
+        "apiSite": "https://developers.nonghyup.com/guide/GU_5050",
+        "apiImgUrl": "https://cdn.ulsanpress.net/news/photo/202402/521942_221466_1852.png",
+        "category": "bank",
+        "apiDesc": "조회한 납부 정보로 전기요금을 납부합니다."
+    },
+    {
+        "apiName": "전기요금 납부내역조회",
+        "apiSite": "https://developers.nonghyup.com/guide/GU_5060",
+        "apiImgUrl": "https://cdn.ulsanpress.net/news/photo/202402/521942_221466_1852.png",
+        "category": "bank",
+        "apiDesc": "전기요금 납부 내역을 조회합니다."
+    },
+    {
+        "apiName": "잔액조회",
+        "apiSite": "https://developers.kftc.or.kr/dev/openapi/open-banking/balance",
+        "apiImgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThKMqCkJ4FgUNdsxwYnDLm5XrfH2tzR7HBJQ&s",
+        "category": "bank",
+        "apiDesc": ""
+    },
+    {
+        "apiName": "거래내역조회",
+        "apiSite": "https://developers.kftc.or.kr/dev/openapi/open-banking/transaction",
+        "apiImgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThKMqCkJ4FgUNdsxwYnDLm5XrfH2tzR7HBJQ&s",
+        "category": "bank",
+        "apiDesc": ""
+    },
+    {
+        "apiName": "계좌실명조회",
+        "apiSite": "https://developers.kftc.or.kr/dev/openapi/open-banking/account",
+        "apiImgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThKMqCkJ4FgUNdsxwYnDLm5XrfH2tzR7HBJQ&s",
+        "category": "bank",
+        "apiDesc": ""
+    },
+    {
+        "apiName": "입금이체",
+        "apiSite": "https://developers.kftc.or.kr/dev/openapi/open-banking/deposit",
+        "apiImgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThKMqCkJ4FgUNdsxwYnDLm5XrfH2tzR7HBJQ&s",
+        "category": "bank",
+        "apiDesc": ""
+    },
+    {
+        "apiName": "출금이체",
+        "apiSite": "https://developers.kftc.or.kr/dev/openapi/open-banking/withdraw",
+        "apiImgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThKMqCkJ4FgUNdsxwYnDLm5XrfH2tzR7HBJQ&s",
+        "category": "bank",
+        "apiDesc": ""
+    },
+    {
+        "apiName": "수취조회",
+        "apiSite": "https://developers.kftc.or.kr/dev/openapi/open-banking/receipt",
+        "apiImgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThKMqCkJ4FgUNdsxwYnDLm5XrfH2tzR7HBJQ&s",
+        "category": "bank",
+        "apiDesc": ""
+    },
+    {
+        "apiName": "송금인정보조회",
+        "apiSite": "https://developers.kftc.or.kr/dev/openapi/open-banking/remitter",
+        "apiImgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThKMqCkJ4FgUNdsxwYnDLm5XrfH2tzR7HBJQ&s",
+        "category": "bank",
+        "apiDesc": ""
+    },
+    {
+        "apiName": "카드목록조회",
+        "apiSite": "https://developers.kftc.or.kr/dev/openapi/open-banking/cards",
+        "apiImgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThKMqCkJ4FgUNdsxwYnDLm5XrfH2tzR7HBJQ&s",
+        "category": "bank",
+        "apiDesc": ""
+    },
+    {
+        "apiName": "카드기본정보조회",
+        "apiSite": "https://developers.kftc.or.kr/dev/openapi/open-banking/issue_info",
+        "apiImgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThKMqCkJ4FgUNdsxwYnDLm5XrfH2tzR7HBJQ&s",
+        "category": "bank",
+        "apiDesc": ""
+    },
+    {
+        "apiName": "카드청구기본정보조회",
+        "apiSite": "https://developers.kftc.or.kr/dev/openapi/open-banking/bills",
+        "apiImgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThKMqCkJ4FgUNdsxwYnDLm5XrfH2tzR7HBJQ&s",
+        "category": "bank",
+        "apiDesc": ""
+    },
+    {
+        "apiName": "선불목록조회",
+        "apiSite": "https://developers.kftc.or.kr/dev/openapi/open-banking/pays-list",
+        "apiImgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThKMqCkJ4FgUNdsxwYnDLm5XrfH2tzR7HBJQ&s",
+        "category": "bank",
+        "apiDesc": ""
+    },
+    {
+        "apiName": "선불연계정보조회",
+        "apiSite": "https://developers.kftc.or.kr/dev/openapi/open-banking/pays-reload",
+        "apiImgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThKMqCkJ4FgUNdsxwYnDLm5XrfH2tzR7HBJQ&s",
+        "category": "bank",
+        "apiDesc": ""
+    },
+    {
+        "apiName": "선불잔액조회",
+        "apiSite": "https://developers.kftc.or.kr/dev/openapi/open-banking/pays-balances",
+        "apiImgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThKMqCkJ4FgUNdsxwYnDLm5XrfH2tzR7HBJQ&s",
+        "category": "bank",
+        "apiDesc": ""
+    },
+    {
+        "apiName": "선불거래내역조회",
+        "apiSite": "https://developers.kftc.or.kr/dev/openapi/open-banking/pays-transactions",
+        "apiImgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThKMqCkJ4FgUNdsxwYnDLm5XrfH2tzR7HBJQ&s",
+        "category": "bank"
+    },
+    {
+        "apiName": "보험목록조회",
+        "apiSite": "https://developers.kftc.or.kr/dev/openapi/open-banking/insurances-list",
+        "apiImgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThKMqCkJ4FgUNdsxwYnDLm5XrfH2tzR7HBJQ&s",
+        "category": "bank",
+        "apiDesc": ""
+    },
+    {
+        "apiName": "보험납입정보조회",
+        "apiSite": "https://developers.kftc.or.kr/dev/openapi/open-banking/insurances-payment",
+        "apiImgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThKMqCkJ4FgUNdsxwYnDLm5XrfH2tzR7HBJQ&s",
+        "category": "bank",
+        "apiDesc": ""
+    },
+    {
+        "apiName": "대출리스목록조회",
+        "apiSite": "https://developers.kftc.or.kr/dev/openapi/open-banking/loans-list",
+        "apiImgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThKMqCkJ4FgUNdsxwYnDLm5XrfH2tzR7HBJQ&s",
+        "category": "bank",
+        "apiDesc": ""
+    },
+    {
+        "apiName": "대출리스기본정보조회",
+        "apiSite": "https://developers.kftc.or.kr/dev/openapi/open-banking/loans-basic",
+        "apiImgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThKMqCkJ4FgUNdsxwYnDLm5XrfH2tzR7HBJQ&s",
+        "category": "bank",
+        "apiDesc": ""
+    },
+    {
+        "apiName": "웹문서 검색하기",
+        "apiSite": "https://developers.kakao.com/docs/latest/ko/daum-search/dev-guide#search-doc",
+        "apiImgUrl": "https://cs.kakao.com/img/cskakaocom/pc/thumb/thumb_kakaotalk.png",
+        "category": "search",
+        "apiDesc": "다음 검색 서비스에서 질의어로 웹 문서를 검색합니다. 원하는 검색어와 함께 결과 형식 파라미터를 선택적으로 추가할 수 있습니다. 응답 본문은 meta, documents로 구성된 JSON 객체입니다."
+    },
+    {
+        "apiName": "동영상 검색하기",
+        "apiSite": "https://developers.kakao.com/docs/latest/ko/daum-search/dev-guide#search-video",
+        "apiImgUrl": "https://cs.kakao.com/img/cskakaocom/pc/thumb/thumb_kakaotalk.png",
+        "category": "search",
+        "apiDesc": "카카오 TV, 유투브(Youtube) 등 서비스에서 질의어로 동영상을 검색합니다. 원하는 검색어와 함께 결과 형식 파라미터를 선택적으로 추가할 수 있습니다. 응답 본문은 meta, documents로 구성된 JSON 객체입니다."
+    },
+    {
+        "apiName": "이미지 검색하기",
+        "apiSite": "https://developers.kakao.com/docs/latest/ko/daum-search/dev-guide#search-image",
+        "apiImgUrl": "https://cs.kakao.com/img/cskakaocom/pc/thumb/thumb_kakaotalk.png",
+        "category": "search",
+        "apiDesc": "다음 검색 서비스에서 질의어로 이미지를 검색합니다. REST API 키를 헤더에 담아 GET으로 요청합니다. 원하는 검색어와 함께 결과 형식 파라미터를 선택적으로 추가할 수 있습니다. 응답 본문은 meta, documents로 구성된 JSON 객체입니다."
+    },
+    {
+        "apiName": "블로그 검색하기",
+        "apiSite": "https://developers.kakao.com/docs/latest/ko/daum-search/dev-guide#search-blog",
+        "apiImgUrl": "https://cs.kakao.com/img/cskakaocom/pc/thumb/thumb_kakaotalk.png",
+        "category": "search",
+        "apiDesc": "다음 블로그 서비스에서 질의어로 게시물을 검색합니다. 원하는 검색어와 함께 결과 형식 파라미터를 선택적으로 추가할 수 있습니다. 응답 본문은 meta, documents로 구성된 JSON 객체입니다."
+    },
+    {
+        "apiName": "책 검색하기",
+        "apiSite": "https://developers.kakao.com/docs/latest/ko/daum-search/dev-guide#search-book",
+        "apiImgUrl": "https://cs.kakao.com/img/cskakaocom/pc/thumb/thumb_kakaotalk.png",
+        "category": "search",
+        "apiDesc": "다음 책 서비스에서 질의어로 도서 정보를 검색합니다. 원하는 검색어와 함께 결과 형식 파라미터를 선택적으로 추가할 수 있습니다. 응답 본문은 meta, documents로 구성된 JSON 객체입니다."
+    },
+    {
+        "apiName": "카페 검색하기",
+        "apiSite": "https://developers.kakao.com/docs/latest/ko/daum-search/dev-guide#search-cafe",
+        "apiImgUrl": "https://cs.kakao.com/img/cskakaocom/pc/thumb/thumb_kakaotalk.png",
+        "category": "search",
+        "apiDesc": "다음 카페 서비스에서 질의어로 게시물을 검색합니다. 원하는 검색어와 함께 결과 형식 파라미터를 선택적으로 추가할 수 있습니다. 응답 본문은 meta, documents로 구성된 JSON 객체입니다."
+    },
+    {
+        "apiName": "블로그",
+        "apiSite": "https://developers.naver.com/docs/serviceapi/search/blog/blog.md#%EB%B8%94%EB%A1%9C%EA%B7%B8",
+        "apiImgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRO9IVGavttBPk_RofxQU3Yy_rQ_T6tZX2qw&s",
+        "category": "search",
+        "apiDesc": "블로그 검색은 검색 API를 사용해 네이버 검색의 블로그 검색 결과를 반환하는 RESTful API입니다."
+    },
+    {
+        "apiName": "뉴스",
+        "apiSite": "https://developers.naver.com/docs/serviceapi/search/news/news.md#%EB%89%B4%EC%8A%A4",
+        "apiImgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRO9IVGavttBPk_RofxQU3Yy_rQ_T6tZX2qw&s",
+        "category": "search",
+        "apiDesc": "뉴스 검색은 검색 API를 사용해 네이버 검색의 뉴스 검색 결과를 반환하는 RESTful API입니다. "
+    },
+    {
+        "apiName": "책",
+        "apiSite": "https://developers.naver.com/docs/serviceapi/search/book/book.md#%EC%B1%85",
+        "apiImgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRO9IVGavttBPk_RofxQU3Yy_rQ_T6tZX2qw&s",
+        "category": "search",
+        "apiDesc": "책 검색은 검색 API를 사용해 네이버 검색의 책 검색 결과를 반환하는 RESTful API입니다."
+    },
+    {
+        "apiName": "성인 검색어 판별",
+        "apiSite": "https://developers.naver.com/docs/serviceapi/search/adult/adult.md#%EC%84%B1%EC%9D%B8%EA%B2%80%EC%83%89%EC%96%B4%ED%8C%90%EB%B3%84",
+        "apiImgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRO9IVGavttBPk_RofxQU3Yy_rQ_T6tZX2qw&s",
+        "category": "search",
+        "apiDesc": "성인 검색어 판별은 입력한 검색어가 성인 검색어인지 판별하는 RESTful API입니다."
+    },
+    {
+        "apiName": "백과사전",
+        "apiSite": "https://developers.naver.com/docs/serviceapi/search/encyclopedia/encyclopedia.md#%EB%B0%B1%EA%B3%BC%EC%82%AC%EC%A0%84",
+        "apiImgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRO9IVGavttBPk_RofxQU3Yy_rQ_T6tZX2qw&s",
+        "category": "search",
+        "apiDesc": "백과사전 검색은 검색 API를 사용해 네이버 검색의 백과사전 검색 결과를 반환하는 RESTful API입니다."
+    },
+    {
+        "apiName": "카페글",
+        "apiSite": "https://developers.naver.com/docs/serviceapi/search/cafearticle/cafearticle.md#%EC%B9%B4%ED%8E%98%EA%B8%80",
+        "apiImgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRO9IVGavttBPk_RofxQU3Yy_rQ_T6tZX2qw&s",
+        "category": "search",
+        "apiDesc": "카페글 검색은 검색 API를 사용해 네이버 카페의 공개 게시판 글을 검색한 결과를 반환하는 RESTful API입니다."
+    },
+    {
+        "apiName": "지식iN",
+        "apiSite": "https://developers.naver.com/docs/serviceapi/search/kin/kin.md#%EC%A7%80%EC%8B%9DiN",
+        "apiImgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRO9IVGavttBPk_RofxQU3Yy_rQ_T6tZX2qw&s",
+        "category": "search",
+        "apiDesc": "지식iN 검색은 검색 API를 사용해 네이버 검색의 지식iN 검색 결과를 반환하는 RESTful API입니다. "
+    },
+    {
+        "apiName": "지역",
+        "apiSite": "https://developers.naver.com/docs/serviceapi/search/local/local.md#%EC%A7%80%EC%97%AD",
+        "apiImgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRO9IVGavttBPk_RofxQU3Yy_rQ_T6tZX2qw&s",
+        "category": "search",
+        "apiDesc": "지역 검색은 검색 API를 사용해 네이버 지역 서비스에 등록된 업체 및 기관을 검색한 결과를 반환하는 RESTful API입니다. "
+    },
+    {
+        "apiName": "오타변환",
+        "apiSite": "https://developers.naver.com/docs/serviceapi/search/errata/errata.md#%EC%98%A4%ED%83%80%EB%B3%80%ED%99%98",
+        "apiImgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRO9IVGavttBPk_RofxQU3Yy_rQ_T6tZX2qw&s",
+        "category": "search",
+        "apiDesc": "오타변환은 한/영 키를 잘못 설정하고 입력한 검색어를 자동으로 변환해 올바른 검색어를 추천하는 RESTful API입니다. "
+    },
+    {
+        "apiName": "웹문서",
+        "apiSite": "https://developers.naver.com/docs/serviceapi/search/web/web.md#%EC%9B%B9%EB%AC%B8%EC%84%9C",
+        "apiImgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRO9IVGavttBPk_RofxQU3Yy_rQ_T6tZX2qw&s",
+        "category": "search",
+        "apiDesc": "웹문서 검색은 검색 API를 사용해 네이버 검색의 웹 문서 검색 결과를 반환하는 RESTful API입니다. "
+    },
+    {
+        "apiName": "이미지",
+        "apiSite": "https://developers.naver.com/docs/serviceapi/search/image/image.md#%EC%9D%B4%EB%AF%B8%EC%A7%80",
+        "apiImgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRO9IVGavttBPk_RofxQU3Yy_rQ_T6tZX2qw&s",
+        "category": "search",
+        "apiDesc": "이미지 검색은 검색 API를 사용해 네이버 검색의 이미지 검색 결과를 반환하는 RESTful API입니다. "
+    },
+    {
+        "apiName": "쇼핑",
+        "apiSite": "https://developers.naver.com/docs/serviceapi/search/shopping/shopping.md#%EC%87%BC%ED%95%91",
+        "apiImgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRO9IVGavttBPk_RofxQU3Yy_rQ_T6tZX2qw&s",
+        "category": "search",
+        "apiDesc": "쇼핑 검색은 검색 API를 사용해 네이버 검색의 쇼핑 검색 결과를 반환하는 RESTful API입니다."
+    },
+    {
+        "apiName": "전문자료",
+        "apiSite": "https://developers.naver.com/docs/serviceapi/search/doc/doc.md#%EC%A0%84%EB%AC%B8%EC%9E%90%EB%A3%8C",
+        "apiImgUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRO9IVGavttBPk_RofxQU3Yy_rQ_T6tZX2qw&s",
+        "category": "search",
+        "apiDesc": "전문자료 검색은 검색 API를 사용해 학술 논문, 리포트, 전문 기관의 보고서 등의 전문 자료 검색 결과를 반환하는 RESTful API입니다."
+    }
+]
