@@ -67,17 +67,19 @@
                     </ul>
                 </div>
                 <div class="main-icon">
-                    <img src="assets/img/banner1.jpg" alt="이미지">
-                    <img src="assets/img/banner2.jpg" alt="이미지">
-                    <img src="assets/img/banner3.jpg" alt="이미지">
-                    <img src="assets/img/banner4.jpg" alt="이미지">
-                    <img src="assets/img/banner5.jpg" alt="이미지">
+                    <img src="assets/img/bank.png" alt="이미지">
+                    <img src="assets/img/calender.png" alt="이미지">
+                    <img src="assets/img/delivery.png" alt="이미지">
+                    <img src="assets/img/map.png" alt="이미지">
+                    <img src="assets/img/data.png" alt="이미지">
                 </div>
-                <div class="main-btn"><a href="php/product/product.php">컬렉션보기</a></div>
+                <div class="main-btn">
+                    <a href="php/product/product.php">컬렉션보기</a>
+                </div>
             </div>
             <div class="content2">
                 <div class="category-title">
-                    <li>Best</li>
+                    <li>상위 카테고리</li>
                 </div>
                 <div class="category-bar">
                     <ul>
@@ -99,14 +101,24 @@
                 <div class="apibanner">
                     <ul>
                         <li>
-                            <a href="php/product/product.php"><img src="assets/img/notice1.jpg" alt="이미지"><span>Maps API</span></a>
-                            <a href="php/product/product.php"><img src="assets/img/notice2.jpg" alt="이미지"><span>News API</span></a>
+                            <a href="php/product/product.php"><img src="assets/img/notice2.jpg" alt="이미지"><span>Data API</span></a>
                             <a href="php/product/product.php"><img src="assets/img/notice3.jpg" alt="이미지"><span>Bank API</span></a>
-                            <a href="php/product/product.php"><img src="assets/img/notice4.jpg" alt="이미지"><span>Weather API</span></a>
-                            <a href="php/product/product.php"><img src="assets/img/notice5.jpg" alt="이미지"><span>Shppping APi</span></a>
+                            <a href="php/product/product.php"><img src="assets/img/notice4.jpg" alt="이미지"><span>calendar API</span></a>
+                            <a href="php/product/product.php"><img src="assets/img/notice5.jpg" alt="이미지"><span>delivery APi</span></a>
+                            <a href="php/product/product.php"><img src="assets/img/notice1.jpg" alt="이미지"><span>Maps API</span></a>
                         </li>
                     </ul>
                 </div>
+            </div>
+            <div class="content4">
+                <ul>
+                    <li>
+                        <a href="#">좋아요</a>
+                        <p>좋아요를 눌러 나만의 API를 등록하세요!</p>
+                    </li>
+                </ul>
+                
+                <div class="main-btn2"><a href="#">컬렉션보기</a></div>
             </div>
         </div>
     </main>

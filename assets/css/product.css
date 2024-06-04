@@ -77,7 +77,6 @@
 }
 
 /* right__cont */
-
 .right__cont {
     width: 250px;
     height: 270px;
@@ -117,11 +116,10 @@
 
 .right__img {
     border-radius: 5%;
-    width: 230px;
-    height: 150px;
-    background-color: black;
+    width: 220px;
+    height: 140px;
     margin: 0 auto;
-    margin-top: 5px;
+    margin-top: 10px;
     /* background: url(https://play-lh.googleusercontent.com/X5-X2S0t7G9dTGrPftk-5hXijqRDhwWKxGDs2gBm_kNPcAlO3re4exC_8nekvDhz-H0=w240-h480-rw); */
     background: url(../img/notice1.jpg);
     background-repeat: no-repeat;
