@@ -77,23 +77,23 @@
             </div>
             <div class="content2">
                 <div class="category-title">
-                    <li>상위 카테고리</li>
+                    <li>Best</li>
                 </div>
                 <div class="category-bar">
                     <ul>
                         <li>
-                            <a href="php/product/product.php"><img src="assets/img/category-icon1.png" alt="이미지"><span>쇼핑</span></a>
-                            <a href="php/product/product.php"><img src="assets/img/category-icon2.png" alt="이미지"><span>뉴스</span></a>
                             <a href="php/product/product.php"><img src="assets/img/category-icon3.png" alt="이미지"><span>지도</span></a>
                             <a href="php/product/product.php"><img src="assets/img/category-icon4.png" alt="이미지"><span>은행</span></a>
-                            <a href="php/product/product.php"><img src="assets/img/category-icon5.png" alt="이미지"><span>날씨</span></a>
+                            <a href="php/product/product.php"><img src="assets/img/category-icon1.png" alt="이미지"><span>배송</span></a>
+                            <a href="php/product/product.php"><img src="assets/img/category-icon2.png" alt="이미지"><span>달력</span></a>
+                            <a href="php/product/product.php"><img src="assets/img/category-icon5.png" alt="이미지"><span>데이터 관리</span></a>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="content3">
                 <div class="recommend-title">
-                    <li>추천API</li>
+                    <li>추천</li>
                     <a href="php/product/product.php">더보기</a>
                 </div>
                 <div class="apibanner">

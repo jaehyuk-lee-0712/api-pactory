@@ -4,10 +4,7 @@
 @import "var.css";
 @import "common.css";
 @import "reset.css";
-@import "board.css";
-@import "product.css";
 
 /* section */
 @import "main.css";
-@import "member.css";
-@import "profile.css";
+@import "member.css"

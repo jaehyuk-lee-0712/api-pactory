@@ -37,6 +37,7 @@
             <div class="right">
                 <div class="right__title">
                     <a href="#" class="category">전체 보기</a>
+                    <div class="popup-btn">모달</div>
                 <select name="#" id="right__select">
                     <option>전체</option>
                     <option value="1">높은 관련성순</option>
@@ -60,9 +61,21 @@
                 </div>    
             </div>
         </div>
+        <div class="popup-view">
+            <img src="../assets/img/banner2.jpg" alt="#">
+            <h2>발주서 목록 조회</h2>
+            <div>
+                <h3>설명</h3>
+                <p>발주서 목록을 하루단위 페이징 형태로 조회합니다.
+                발주서 목록을 하루단위 페이징 형태로 조회합니다.
+                </p>
+            </div>
+            <a href="#" class="popup-url">사이트 바로가기</a>
+            <a href="#" class="popup-close">닫기</a>  
+        </div>
     </div>
 <?php
-    // include "../component/footer.php";
+    include "../component/footer.php";
 ?>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -151,6 +164,31 @@ $(document).ready(function() {
 //   printApiList();
   changeCatogory();
 });
+</script>
+
+
+<!-- 추가된 부분 머원(17:45분) -->
+<script>
+   
+$(document).ready(function() {
+     // 마우스 오버
+    $(".right__main").on("mouseover", ".right__btn", function() {
+        $(this).closest(".right__cont").css("background-color", "#8e93a5");
+    }, );
+
+    $(".right__main").on("mouseout", ".right__btn", function() {
+        $(this).closest(".right__cont").css("background-color", "");
+    });
+
+    // 모달
+    $(".popup-btn").click(function(){
+        $(".popup-view").show()
+    })
+    $(".popup-close").click(function(){
+        $(".popup-view").hide()
+    })
+});
+
 </script>
 </body>
 </html>

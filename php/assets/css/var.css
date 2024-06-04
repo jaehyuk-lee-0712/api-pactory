@@ -2,7 +2,6 @@
     --fontI: "IBM Plex Sans";
     --fontT: "Noto Sans KR", sans-serif;
     --fontN: 'NanumSquareNeo';
-    --fontH: "Black Han Sans";
 
 
     --mainwhiteColor: #f1e9e9;
@@ -32,10 +31,10 @@
     /* // 아이폰 가로 모드에서 글씨 확대 금지 */
     -webkit-text-size-adjust: 100%;
 
-    /* --snsInsta: url(../img/snsLogo2.png);
-    --snsGithub: url(../img/snsLogo3.png);
-    --snsYoutube: url(../img/snsLogo1.png);
-    --snsBlog: url(../img/snsLogo4.png); */
+    --snsInsta: url(../img/snsLogo2.svg);
+    --snsGithub: url(../img/snsLogo3.svg);
+    --snsYoutube: url(../img/snsLogo1.svg);
+    --snsBlog: url(../img/snsLogo4.svg);
 }
 
 @media (max-width : 800px) {
