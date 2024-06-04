@@ -6,7 +6,9 @@
 @import "reset.css";
 @import "board.css";
 @import "product.css";
+@import "like.css";
 
 /* section */
 @import "main.css";
-@import "member.css"
+@import "member.css";
+@import "profile.css";

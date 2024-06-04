@@ -20,7 +20,21 @@
 <?php
     if(isset($_SESSION['userID'])) {
 ?>            
-        <a href="../login/logOutAction.php">로그아웃</a>
+    
+    <div class="login-member">
+<ul>
+    <li class="on"><a href="#"><img src="../../assets/img/profile.png" alt="profile" class="login-profile"></a></li>
+       <div  class="profile-box" id="profileMenu">
+        <ul>
+            <li>
+                 <a href="../profile/myPage.php">마이페이지</a>
+                 <a href="../login/logOutAction.php">로그아웃</a>
+            </li>
+        </ul>
+    </div>
+</ul>
+</div>
+
 <?php
     }else {
 ?>
