@@ -97,7 +97,7 @@
     margin-right: 15px;
 }
 
-#profile {
+/* #profile {
     margin-left: 70px;
     margin-right: 70px;
 }
@@ -108,9 +108,9 @@
     border-radius: 50%;
     background-color: #dedede;
     line-height: 1;
-}
+} */
 
-#controller .login-profile {
+.login-profile {
     width: 40px;
     height: 40px;
     border: 1px solid var(--black);
@@ -119,11 +119,11 @@
     border-radius: 50%;
 }
 
-#controller .login-profile:hover {
+.login-profile:hover {
     background-color: var(--white200);
 }
 
-#controller .profile-box {
+.profile-box {
     border-radius: 5px;
     border: 1px solid #ccc;
     width: 250px;
@@ -137,7 +137,7 @@
     top: 50px;
 }
 
-#controller .profile-box.show {
+.profile-box.show {
     top: 65px;
     visibility: visible;
     opacity: 1;

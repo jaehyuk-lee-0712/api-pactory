@@ -43,10 +43,10 @@
                     }
                     $update_stmt->close();
                 } else {
-                    echo "<script>alert('새 비밀번호와 확인이 일치하지 않습니다.'); history.back(); </script>";
+                    echo "<script>alert('새 비밀번호와 확인이 일치하지 않습니다.'); </script>";
                 }
             } else {
-                echo "<script>alert('현재 비밀번호가 올바르지 않습니다.'); history.back();</script>";
+                echo "<script>alert('현재 비밀번호가 올바르지 않습니다.');</script>";
             }
         } else {
             echo "<script>alert('사용자 정보를 찾을 수 없습니다.');</script>";

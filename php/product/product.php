@@ -62,7 +62,7 @@
             </div>
         </div>
         <div class="popup-view">
-            <img src="../../assets/img/banner2.jpg" alt="#">
+            <img src="../assets/img/banner2.jpg" alt="#">
             <h2>발주서 목록 조회</h2>
             <div>
                 <h3>설명</h3>

@@ -7,7 +7,6 @@
         <div id="menu">
             <ul>
                 <li><a href="../product/product.php">api 상품</a></li>
-                <li><a href="#">카테고리</a></li>
                 <li><a href="../board/board.php">공지사항</a></li>
             </ul>
         </div>
@@ -20,8 +19,7 @@
 <?php
     if(isset($_SESSION['userID'])) {
 ?>            
-    
-    <div class="login-member">
+        <div class="login-member">
 <ul>
     <li class="on"><a href="#"><img src="../../assets/img/profile.png" alt="profile" class="login-profile"></a></li>
        <div  class="profile-box" id="profileMenu">
@@ -34,6 +32,7 @@
     </div>
 </ul>
 </div>
+ 
 
 <?php
     }else {
@@ -45,4 +44,5 @@
 ?>
 
     </div>
+   
 </header>
